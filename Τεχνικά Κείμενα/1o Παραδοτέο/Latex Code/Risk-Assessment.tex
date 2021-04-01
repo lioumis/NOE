@@ -1,0 +1,175 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage{alphabeta} 
+\usepackage{ragged2e}
+
+\usepackage{blindtext}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{hyperref}
+\linespread{1.06}
+\setlength{\parskip}{8pt plus2pt minus2pt}
+\usepackage{fancyhdr}
+\widowpenalty 10000
+\clubpenalty 10000
+
+\newcommand{\eat}[1]{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\setlist{nolistsep,noitemsep}
+\usepackage[hidelinks]{hyperref}
+ \usepackage[table]{xcolor}
+
+
+
+\usepackage{lipsum}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\begin{document}
+
+\renewcommand{\contentsname}{Περιεχόμενα}
+
+\renewcommand{\refname}{Αναφορές}
+
+%===========================================================
+\begin{titlepage}
+\begin{center}
+
+% Top 
+\includegraphics[width=0.55\textwidth]{upatras_logo.jpg}~\\[2cm]
+
+
+% Title
+\HRule \\[0.4cm]
+{ \LARGE 
+  \textbf{PROJECT TΕΧΝΟΛΟΓΙΑ ΛΟΓΙΣΜΙΚΟΥ}\\[0.4cm]
+  \emph{Risk-assessment-v0.1}\\[0.4cm]
+}
+\HRule \\[1.5cm]
+
+
+
+% Author
+{ \large
+  \includegraphics[width=0.5\textwidth]{logo.png}~\\[2cm]
+ 
+}
+
+\vfill
+
+\textsc{\large Τμήμα Μηχανικών Ηλεκτρονικών Υπολογιστών \& Πληροφορικής}\\[0.4cm]
+
+
+% Bottom
+{\large \selectlanguage{greek}\today}
+ 
+\end{center}
+\end{titlepage}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{Risk-assessment-v0.1}
+\fancyhead[LO,CE]{\includegraphics[width=0.05\textwidth]{logo.png}}
+\centering
+Ακολουθεί ο πίνακας με τα ονόματα και τα ΑΜ της ομαδάς μας:
+
+\centering
+\begin{tabular}{ |p{4cm}|p{4cm}|p{3cm}|}
+\arrayrulecolor{gray}
+ \hline
+ \multicolumn{3}{|c|}{Μέλη} \\
+ \hline
+ ΕΠΩΝΥΜΟ& ΟΝΟΜΑ & Α.M\\
+ \hline
+ ΛΙΟΥΜΗΣ   & ΕΥΑΓΓΕΛΟΣ    & 1054325\\
+ ΣΧΙΖΑΣ &  ΝΙΚΟΛΑΟΣ & 1054394\\
+ ΛΥΡΟΥ & ΔΗΜΗΤΡΑ & 1057774\\
+ ΜΠΟΥΡΣΑΛΗΣ   & ΕΜΜΑΝΟΥΗΛ & 1056284\\
+\hline 
+
+\end{tabular}
+
+
+\vspace{7cm}
+\raggedright
+\textbf{Editors:}
+\newline
+Νίκος Σχίζας
+\newline
+Δήμητρα Λύρου
+\newline
+Ευάγγελος Λιούμης
+\newline
+Εμμανουήλ Μπούρσαλης
+
+
+\vspace{8cm}
+
+\raggedright
+\textbf{Εργαλεία:}
+
+    Overleaf
+    
+    Microsoft Word
+    
+    
+
+\newpage
+
+%===========================================================
+
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\newpage
+\setcounter{page}{1}
+
+%===========================================================
+%===========================================================
+
+\section{Εισαγωγή}\label{sec:intro}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{Risk-assessment-v0.1}
+\fancyhead[LO,CE]{\includegraphics[width=0.05\textwidth]{logo.png}}
+\justifying
+\noindent
+\hspace{1cm}Ο όρος του Risk Assessment χρησιμοποιείται για να περιγράψει την διαδικασία κατά την οποία εντοπίζονται κίνδυνοι και παράγοντες απειλών που ενδέχεται να προκαλέσουν βλάβη, αναλύονται και αξιολογούνται κίνδυνοι που σχετίζονται με την απειλή αυτή και προσδιορίζονται κατάλληλοι τρόποι για την εξάλειψη του κινδύνου ή έλεγχο αυτού όταν δεν μπορεί να αντιμετωπισθεί πλήρως. Στην σύγχρονη εποχή ο όρος του risk assessment έκανε την εμφάνιση του πριν από περίπου 40 χρόνια όπου και συναντάμε τις πρώτες επιστημονικές μελέτες. Σε μία επιχείρηση η εκτίμηση κινδύνου παίζει καταλυτικό ρόλο στην εύρυθμη λειτουργία της αφού βοηθάει στην ύπαρξη επίγνωσης των ρίσκων, προσδιορίζει ποιος ή ποιοι μπορεί να απειλούνται όπως οι υπάλληλοι, οι επισκέπτες κ.λπ., δίνει προτεραιότητα στους κινδύνους και τα μέτρα ελέγχου που πρέπει να ληφθούν και αποτρέπει από τραυματισμούς όταν γίνεται στο στάδιο του σχεδιασμού.\par
+\hspace{1cm}Η ομάδα μας ανέλαβε την περάτωση του έργου Ν.Ο.Ε. το οποίο έχει σαν σκοπό την καλύτερη δυνατή οργάνωση και διαχείριση των νοσοκομειακών μονάδων της χώρας μας. Στο χρονικό διάστημα κατά το οποίο η εφαρμογή θα βρίσκεται σε υλοποίηση πιθανόν να προκύψουν αρκετοί κίνδυνοι τους οποίους οφείλουμε να εντοπίσουμε από την αρχή, να τους εκτιμήσουμε και να προτείνουμε τις καλύτερες στρατηγικές για την αντιμετώπισή τους. Αρχικά, έχουμε θέσει σαν στόχο την αποπεράτωση του έργου σε χρονικό διάστημα 16 έως 30 μηνών, με μία πιθανή καθυστέρηση να οφείλεται είτε σε κακό χρονοπρογραμματισμό, είτε αδυναμίας εύρεσης αξιόπιστου εργατικού δυναμικού καθώς το έργο που θα υλοποιήσουμε είναι επίπονο και χρειάζονται στελέχη με εμπειρία, είτε της έλλειψης πρωτοποριακών ιδεών που θα κάνουν το έργο μας να ξεχωρίσει και να επιτύχει τον στόχο του. Επιπλέον, δεδομένου του ότι η ολοκλήρωση του project θα διαρκέσει περισσότερο του ενός χρόνου οι εργαζόμενοι οφείλουν να είναι εχέμυθοι ώστε να μην διαρρεύσει η κεντρική ιδέα μας σε άλλους ανταγωνιστές και βρεθούμε στην δυσμενή θέση για δικαστικές διαμάχες. Επίσης, σε ένα τόσο μεγάλο έργο πάντα υπάρχει η απειλή μόλυνσης από κάποιο κακόβουλο λογισμικό με στόχο την καθυστέρηση της ολοκλήρωσής του ή και την οριστική διακοπή του. Ακόμη, μεγάλος κίνδυνος υπάρχει από τις πολιτικές αλλαγές στο κράτος με αποτέλεσμα να δημιουργηθεί πρόβλημα με την χρηματοδότηση του project μας ή ακόμη και εγκατάλειψη της υλοποίησής του από την νέα κυβέρνηση. Επιπλέον, εξαιτίας της κατάστασης που επικρατεί στον πλανήτη με την πανδημία του κορονοϊού υπάρχει η απειλή κάποιο ή κάποια μέλη της ομάδας μας να νοσήσουν και έτσι για ένα μεγάλο χρονικό διάστημα να είναι αδύνατη η συμμετοχή τους στην εξέλιξη του έργου, ενώ δεν μπορεί να αγνοηθεί και η αδυναμία προσέλευσης των ατόμων στο χώρο εργασίας τους δημιουργώντας προβλήματα επικοινωνίας και οργάνωσης. Επιπροσθέτως, καλούμαστε να αντιμετωπίσουμε τον κίνδυνο καθυστέρησης παραλαβής σημαντικού εξοπλισμού απαραίτητου για την ολοκλήρωση του έργου μας καθώς και σημαντικών εγγράφων λόγω της επιφορτισμένης κατάστασης που επικρατεί στις ταχυμεταφορές. Επίσης, η συνεχώς αυξανόμενη τιμολογιακή πολιτική που παρατηρείται σε πολλά προϊόντα που είναι άρρηκτα συνδεδεμένα με την υλοποίηση του project μας μπορεί να οδηγήσει την εταιρεία μας σε αδυναμία αναπλήρωσής τους. Τέλος, έναν ακόμη κίνδυνο αποτελεί η πιθανότητα επιστράτευσης των ανδρών που απαρτίζουν το εργατικό μας δυναμικό εξαιτίας των επεκτατικών πολιτικών που ακολουθούν οι γειτονικές μας χώρες θέτοντας σε απειλή τα κυριαρχικά δικαιώματα της χώρας μας.\par
+Λόγω της πληθώρας των ρίσκων που υπάρχουν επιλέχθηκαν οι πιο συχνά εμφανιζόμενοι κίνδυνοι κατά την δίκη μας κρίση και στους παρακάτω πίνακες αναλύεται ο κάθε κίνδυνος ξεχωριστά.
+
+\section{Ενδεικτικοί πίνακες}\label{sec:intro}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{Risk-assessment-v0.1}
+\fancyhead[LO,CE]{\includegraphics[width=0.05\textwidth]{logo.png}}
+\centerline{\includegraphics[width=0.89\textwidth]{page5.pdf}}
+\centerline{\includegraphics[page=6,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=7,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=8,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=9,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=10,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=11,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=12,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=13,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=14,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=15,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=16,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=17,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=18,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=19,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+\centerline{\includegraphics[page=20,width=1.3\textwidth]{Risk-assessment-v1.0(new)(1).pdf}}
+
+
+%===========================================================
+%===========================================================
+
+
+
+\end{document} 
