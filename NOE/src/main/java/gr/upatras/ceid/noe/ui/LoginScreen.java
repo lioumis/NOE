@@ -1,4 +1,3 @@
-
 package gr.upatras.ceid.noe.ui;
 
 /**
@@ -6,7 +5,6 @@ package gr.upatras.ceid.noe.ui;
  * @author Evangelos Lioumis
  */
 public class LoginScreen extends javax.swing.JFrame {
-
 
     public LoginScreen() {
         initComponents();
