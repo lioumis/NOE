@@ -98,7 +98,7 @@ public class RoleScreen extends javax.swing.JFrame {
                 System.out.println("Doctor not yet implemented"); //TODO: Testing
                 break; //TODO: Testing
             case"Διευθυντής": //TODO: Testing
-                System.out.println("Director not yet implemented"); //TODO: Testing
+                System.out.println("Manager not yet implemented"); //TODO: Testing
                 break; //TODO: Testing
             case"Γραμματέας": //TODO: Testing
                 SecretaryMainScreen.main(null); //TODO: Testing
