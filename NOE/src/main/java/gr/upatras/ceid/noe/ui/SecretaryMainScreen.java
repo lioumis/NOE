@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author Evangelos Lioumis
  */
 public class SecretaryMainScreen extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SecretaryMainScreen
-     */
     public SecretaryMainScreen() {
         initComponents();
         this.setLocationRelativeTo(null);
