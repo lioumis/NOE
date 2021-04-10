@@ -27,13 +27,12 @@ public class RoleScreen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(613, 465));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("Επιλογή ρόλου:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ασθενής", "Ιατρός", "Διευθυντής", "Γραμματέας" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ασθενής", "Ιατρός", "Διευθυντής", "Γραμματέας", "Υπεύθυνος Προμηθειών" }));
 
         jButton1.setText("Είσοδος");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -49,15 +48,15 @@ public class RoleScreen extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(142, Short.MAX_VALUE)
+                .addContainerGap(191, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(37, 37, 37)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(141, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(191, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -91,7 +90,23 @@ public class RoleScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        switch(jComboBox1.getSelectedItem().toString()){ //TODO: Testing
+            case"Ασθενής": //TODO: Testing
+                PatientMainScreen.main(null); //TODO: Testing
+                break; //TODO: Testing
+            case"Ιατρός": //TODO: Testing
+                System.out.println("Doctor not yet implemented"); //TODO: Testing
+                break; //TODO: Testing
+            case"Διευθυντής": //TODO: Testing
+                System.out.println("Director not yet implemented"); //TODO: Testing
+                break; //TODO: Testing
+            case"Γραμματέας": //TODO: Testing
+                SecretaryMainScreen.main(null); //TODO: Testing
+                break; //TODO: Testing
+            case"Υπεύθυνος Προμηθειών": //TODO: Testing
+                SupplyManagerMainScreen.main(null); //TODO: Testing
+        } //TODO: Testing
+        this.dispose(); //TODO: Testing
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
