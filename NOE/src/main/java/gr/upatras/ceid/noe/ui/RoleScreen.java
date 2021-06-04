@@ -27,6 +27,7 @@ public class RoleScreen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Επιλογή ρόλου");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -48,14 +49,14 @@ public class RoleScreen extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
+                .addContainerGap(198, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(37, 37, 37)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(191, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(130, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -66,13 +67,13 @@ public class RoleScreen extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(47, 47, 47)
+                .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                .addGap(29, 29, 29)
                 .addComponent(jButton1)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,10 +96,10 @@ public class RoleScreen extends javax.swing.JFrame {
                 PatientMainScreen.main(null); //TODO: Testing
                 break; //TODO: Testing
             case"Ιατρός": //TODO: Testing
-                System.out.println("Doctor not yet implemented"); //TODO: Testing
+                DoctorMainScreen.main(null); //TODO: Testing
                 break; //TODO: Testing
             case"Διευθυντής": //TODO: Testing
-                System.out.println("Manager not yet implemented"); //TODO: Testing
+                ManagerMainScreen.main(null); //TODO: Testing
                 break; //TODO: Testing
             case"Γραμματέας": //TODO: Testing
                 SecretaryMainScreen.main(null); //TODO: Testing
@@ -109,9 +110,6 @@ public class RoleScreen extends javax.swing.JFrame {
         this.dispose(); //TODO: Testing
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
