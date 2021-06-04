@@ -1,6 +1,8 @@
 
 package gr.upatras.ceid.noe;
 
+import java.io.File;
+
 /**
  *
  * @author Emmanouil Boursalis
