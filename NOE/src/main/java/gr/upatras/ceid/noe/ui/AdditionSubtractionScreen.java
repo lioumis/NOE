@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author NickSxiz
  */
 public class AdditionSubtractionScreen extends javax.swing.JFrame {
 

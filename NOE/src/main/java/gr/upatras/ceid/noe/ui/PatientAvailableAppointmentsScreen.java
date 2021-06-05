@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Evangelos Lioumis
+ * @author NickSxiz
  */
 public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
 

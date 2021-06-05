@@ -3,7 +3,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author Evangelos Lioumis
+ * @author NickSxiz
  */
 public class SupplyManagerMainScreen extends javax.swing.JFrame {
 
@@ -11,7 +11,16 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-
+    
+    private void addSupplies(){
+        
+    }
+    
+    
+    
+    private void subtractionSupplies(){
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

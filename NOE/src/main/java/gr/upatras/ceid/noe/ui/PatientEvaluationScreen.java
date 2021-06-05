@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author NickSxiz
  */
 public class PatientEvaluationScreen extends javax.swing.JFrame {
 

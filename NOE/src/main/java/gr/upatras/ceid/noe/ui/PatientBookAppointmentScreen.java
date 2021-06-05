@@ -2,7 +2,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author Evangelos Lioumis
+ * @author NickSxiz
  */
 public class PatientBookAppointmentScreen extends javax.swing.JFrame {
 
