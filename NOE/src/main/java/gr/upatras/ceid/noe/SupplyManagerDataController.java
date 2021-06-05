@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe;
  */
 public class SupplyManagerDataController {
     public void askData(){
-        return;
+        
     }
     
     private void calculate(){
