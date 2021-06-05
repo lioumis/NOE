@@ -10,7 +10,7 @@ public class StatisticsController {
 
     }
 
-    public void createEmail(ArrayList<String> recepients, String subject, String body) {
-
+    public boolean createEmail(ArrayList<String> recepients, String subject, String body) {
+        return true;
     }
 }
