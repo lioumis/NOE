@@ -11,10 +11,10 @@ public class SupplyManagerDataController {
     }
     
     private void calculate(){
-        return;
+        
     }
     
     public void create(){
-        return;
+        
     }
 }
