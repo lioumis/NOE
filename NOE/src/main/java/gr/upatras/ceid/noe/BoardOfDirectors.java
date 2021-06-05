@@ -1,20 +1,20 @@
 
 package gr.upatras.ceid.noe;
 
-import java.util.Set;
+import java.util.HashMap;
 
 /**
  *
  * @author Emmanouil Boursalis
  */
 public class BoardOfDirectors {
-    private Set<String> members;
+    private HashMap<String, String> members;
 
-    public Set<String> getMembers() {
+    public HashMap<String, String> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<String> members) {
+    public void setMembers(HashMap<String, String> members) {
         this.members = members;
     }
     
