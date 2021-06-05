@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author Evangelos Lioumis
  */
 public class ProofOfDischargeScreen extends javax.swing.JFrame {
 
@@ -16,6 +16,14 @@ public class ProofOfDischargeScreen extends javax.swing.JFrame {
      */
     public ProofOfDischargeScreen() {
         initComponents();
+    }
+
+    public void display() {
+
+    }
+
+    public void onSend() {
+
     }
 
     /**
