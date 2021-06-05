@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe;
 
 /**
  *
- * @author User
+ * @author NickSxiz
  */
 public class EvaluationController {
     
