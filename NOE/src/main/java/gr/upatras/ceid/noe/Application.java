@@ -4,7 +4,6 @@ package gr.upatras.ceid.noe;
 import java.io.File;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class Application {
@@ -44,24 +43,24 @@ public class Application {
     public void setRecruitmentApplication(File recruitmentApplication) {
         this.recruitmentApplication = recruitmentApplication;
     }
-    
-    public void check(){
-        return;
+
+    public void check() {
+
     }
-    
-    public void delete(){
-        return;
+
+    public void delete() {
+
     }
-    
-    public void update(){
-        return;
+
+    public void update() {
+
     }
-    
-    public void retrieve(){
-        return;
+
+    public void retrieve() {
+
     }
-    
-    public void save(){
-        return;
+
+    public void save() {
+
     }
 }
