@@ -45,4 +45,23 @@ public class Application {
         this.recruitmentApplication = recruitmentApplication;
     }
     
+    public void check(){
+        return;
+    }
+    
+    public void delete(){
+        return;
+    }
+    
+    public void update(){
+        return;
+    }
+    
+    public void retrieve(){
+        return;
+    }
+    
+    public void save(){
+        return;
+    }
 }
