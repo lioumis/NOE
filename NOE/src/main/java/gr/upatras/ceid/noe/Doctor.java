@@ -15,6 +15,8 @@ public class Doctor {
         this.speciality = speciality;
     }
 
+
+
     public Doctor getDoctor(Doctor Doctor) {
         return Doctor;
     }
