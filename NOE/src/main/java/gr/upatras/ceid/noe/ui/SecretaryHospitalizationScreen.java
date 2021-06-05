@@ -12,6 +12,30 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    public void initialize() {
+
+    }
+
+    public void showConfirmation() {
+
+    }
+
+    private void cancel() {
+
+    }
+
+    private void close() {
+
+    }
+
+    private void search() {
+
+    }
+
+    private void send() {
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
