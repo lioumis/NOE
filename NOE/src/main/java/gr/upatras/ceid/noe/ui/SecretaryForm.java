@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author Evangelos Lioumis
  */
 public class SecretaryForm extends javax.swing.JFrame {
 
@@ -16,6 +16,14 @@ public class SecretaryForm extends javax.swing.JFrame {
      */
     public SecretaryForm() {
         initComponents();
+    }
+
+    public void display() {
+
+    }
+
+    private void onCancel() {
+
     }
 
     /**
