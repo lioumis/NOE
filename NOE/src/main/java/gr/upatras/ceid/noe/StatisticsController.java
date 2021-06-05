@@ -1,7 +1,6 @@
 package gr.upatras.ceid.noe;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
