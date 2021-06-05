@@ -26,15 +26,15 @@ public class Supply {
     }
     
     public void calculate(){
-        return;
+        
     }
     
     public void save(){
-        return;
+        
     }
     
     public void create(){
-        return;
+        
     }
     
 }
