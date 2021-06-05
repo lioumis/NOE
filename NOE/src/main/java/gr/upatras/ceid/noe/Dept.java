@@ -35,6 +35,10 @@ public class Dept {
     public void setPaid(boolean paid) {
         this.paid = paid;
     }
+    
+    public void updateCost(){
+    
+    }
 
     
 }
