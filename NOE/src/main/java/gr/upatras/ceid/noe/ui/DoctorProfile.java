@@ -23,7 +23,7 @@ public class DoctorProfile extends javax.swing.JFrame {
     }
     
     private void displayEvaluations(){
-        
+         
     }
     /**
      * This method is called from within the constructor to initialize the form.
