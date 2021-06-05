@@ -10,6 +10,7 @@ public class HospitalBudget {
     private float supplyCosts;
     private float functionalCosts;
     private float equipmentCosts;
+    private float Budget;
 
     public float getPayroll() {
         return payroll;
@@ -41,6 +42,24 @@ public class HospitalBudget {
 
     public void setEquipmentCosts(float equipmentCosts) {
         this.equipmentCosts = equipmentCosts;
+    }
+    
+    
+    public void initializeBudget(){
+        
+    }
+    
+    private void calculate(){
+    
+    }
+    
+    public float getBudget(){
+        return Budget;
+    }
+    
+   
+    public void setBudget(float Budget){
+        this.Budget = Budget;
     }
     
 }
