@@ -71,5 +71,49 @@ public class Appointment {
         this.appointments = appointments;
     }
     
+    public void display(){
+        
+    }
+    
+    public void doChanges(){
+        
+       
+    }
+    
+    public void CheckCompl(){
+        
+    }
+    
+    public void onCancel(){
+        
+    }
+    public boolean isCorrect(){
+        
+        return true;
+        
+    }
+    
+    public boolean okData(){
+        return true;
+    }
+    
+    public Appointment getAppointment(){
+        return new Appointment();
+    }
+    
+    private void save(){
+        
+    }
+    
+    public void saveAppointments(){
+        
+    }
+    
+    public void updateAppointment(){
+        
+    }
+    
+    public void upload(){
+    }
     
 }
