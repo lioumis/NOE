@@ -6,6 +6,7 @@ public class Email {
     private String ArrayList;
     private String subject;
     private String body;
+    public void send(){}
 
     public String getArrayList() {
         return ArrayList;
