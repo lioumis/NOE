@@ -7,7 +7,7 @@ package gr.upatras.ceid.noe.ui;
 
 /**
  *
- * @author User
+ * @author Evangelos Lioumis
  */
 public class DischargeNoteScreen extends javax.swing.JFrame {
 
@@ -16,6 +16,22 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
      */
     public DischargeNoteScreen() {
         initComponents();
+    }
+
+    public void display() {
+
+    }
+
+    public void onCreate() {
+
+    }
+
+    private void fillForm() {
+
+    }
+
+    private void submitForm() {
+
     }
 
     /**
