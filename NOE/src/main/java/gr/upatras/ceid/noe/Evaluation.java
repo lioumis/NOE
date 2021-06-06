@@ -1,7 +1,6 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author NickSxiz
  */
 public class Evaluation {
@@ -45,7 +44,7 @@ public class Evaluation {
         this.comment = comment;
     }
 
-    public Evaluation getEvaluation(){
+    public Evaluation getEvaluation() {
         return new Evaluation();
     }
 

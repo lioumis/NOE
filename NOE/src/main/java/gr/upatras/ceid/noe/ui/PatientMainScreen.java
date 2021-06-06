@@ -10,11 +10,11 @@ public class PatientMainScreen extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    private void chooseAppointment(){
+    private void chooseAppointment() {
         
     }
     
-    private void showEvaluationScreen(){
+    private void showEvaluationScreen() {
         
     }
     /**

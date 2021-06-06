@@ -3,10 +3,8 @@ package gr.upatras.ceid.noe;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.*;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class Order {
@@ -28,9 +26,10 @@ public class Order {
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
-    public void save(){
-     
+
+    public void save() {
+
     }
-    
-    
+
+
 }

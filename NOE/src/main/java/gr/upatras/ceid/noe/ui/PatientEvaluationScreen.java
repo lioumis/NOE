@@ -21,7 +21,7 @@ public class PatientEvaluationScreen extends javax.swing.JFrame {
         
     }
     
-    private void displayErrorMessage(){
+    private void displayErrorMessage() {
         
     }
     /**

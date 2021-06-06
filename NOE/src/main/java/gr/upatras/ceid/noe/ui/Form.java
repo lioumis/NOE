@@ -18,11 +18,11 @@ public class Form extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void fillForm(){
+    public void fillForm() {
         
     }
     
-    public void onSave(){
+    public void onSave() {
         
     }
     /**

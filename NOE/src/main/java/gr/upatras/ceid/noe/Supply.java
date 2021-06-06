@@ -2,7 +2,6 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class Supply {
@@ -24,17 +23,17 @@ public class Supply {
     public void setCost(float cost) {
         this.cost = cost;
     }
-    
-    public void calculate(){
-        
+
+    public void calculate() {
+
     }
-    
-    public void save(){
-        
+
+    public void save() {
+
     }
-    
-    public void create(){
-        
+
+    public void create() {
+
     }
-    
+
 }
