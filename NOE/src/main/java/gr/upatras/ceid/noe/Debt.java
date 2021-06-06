@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
  *
  * @author Emmanouil Boursalis
  */
-public class Dept {
+public class Debt {
     private TreatmentCost cost;
     private boolean paid;
     private LocalDateTime paymentDate;
