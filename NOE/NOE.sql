@@ -1,4 +1,4 @@
-drop database noe;
+#drop database noe;
 create database noe;
 use noe;
 
