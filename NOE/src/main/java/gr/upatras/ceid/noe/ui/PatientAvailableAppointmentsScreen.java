@@ -1,8 +1,10 @@
 package gr.upatras.ceid.noe.ui;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Evangelos Lioumis
+ * @author NickSxiz
  */
 public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
 
@@ -11,6 +13,26 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+       public void display(){
+           
+       }
+       
+       private void chooseDateAndTime(){
+           
+       }
+       
+       private void chooseBookAppointment(){
+           
+       }
+       
+       private void chooseNewSearch(){
+           
+       }
+       
+       private boolean sendEmail(ArrayList<Appointment>, String, String){
+           return true;
+       }
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

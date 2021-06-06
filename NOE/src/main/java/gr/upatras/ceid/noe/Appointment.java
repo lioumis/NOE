@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 package gr.upatras.ceid.noe;
+
 import java.util.Date;
 import java.time.LocalTime;
 import java.util.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
 /**
- *
  * @author NickSxiz
  */
 public class Appointment {
@@ -63,57 +64,58 @@ public class Appointment {
         this.patient = patient;
     }
 
-    public ArrayList<Appointment>  getAppointments() {
+    public ArrayList<Appointment> getAppointments() {
         return appointments;
     }
 
-    public void setAppointments(ArrayList<Appointment>  appointments) {
+    public void setAppointments(ArrayList<Appointment> appointments) {
         this.appointments = appointments;
     }
 
-    public void display(){
+    public void display() {
 
     }
 
-    public void doChanges(){
+    public void doChanges() {
 
 
     }
 
-    public void CheckCompl(){
+    public void CheckCompl() {
 
     }
 
-    public void onCancel(){
+    public void onCancel() {
 
     }
-    public boolean isCorrect(){
+
+    public boolean isCorrect() {
 
         return true;
 
     }
 
-    public boolean okData(){
+    public boolean okData() {
         return true;
     }
 
-    public Appointment getAppointment(){
+    public Appointment getAppointment() {
         return new Appointment();
     }
 
-    private void save(){
+    private void save() {
 
     }
 
-    public void saveAppointments(){
+    public void saveAppointments() {
 
     }
 
-    public void updateAppointment(){
+    public void updateAppointment() {
 
     }
 
-    public void upload(){
+    public void upload() {
     }
 
 }

@@ -4,9 +4,9 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author NickSxiz
  */
-public class PatientBookAppointmentScreen extends javax.swing.JFrame {
+public class BookAppointment extends javax.swing.JFrame {
 
-    public PatientBookAppointmentScreen() {
+    public BookAppointment() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -84,20 +84,21 @@ public class PatientBookAppointmentScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PatientBookAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PatientBookAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PatientBookAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientBookAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientBookAppointmentScreen().setVisible(true);
+                new BookAppointment().setVisible(true);
             }
         });
     }
