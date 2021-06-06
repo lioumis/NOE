@@ -1,16 +1,30 @@
 package gr.upatras.ceid.noe;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DatabaseConnection {
 
-    String Patient;
-    String Surgery;
-    String Schedule;
-    private java.util.ArrayList<Supply> Supplies;
-    private Object String;
+    private static final String DRIVER_CLASS = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/noe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "password";
+    private static final String ERROR_MESSAGE = "Η σύνδεση με τη βάση δεδομένων απέτυχε!";
 
+
+    public static Connection connect() {
+        try {
+            Class.forName(DRIVER_CLASS);
+            return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        } catch (Exception e) {
+
+            MessageHelper.showErrorMessage(ERROR_MESSAGE);
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public int retrieveAvailableBeds() {
         return 0;
@@ -47,7 +61,7 @@ public class DatabaseConnection {
     }
 
     public String searchPatient() {
-        return Patient;
+        return "";
     }
 
     public TreatmentCost searchHospitalizationCost() {
@@ -59,35 +73,35 @@ public class DatabaseConnection {
     }
 
     public ArrayList<Doctor> retrieveDoctors() {
-        return new ArrayList<Doctor>();
+        return new ArrayList<>();
     }
 
     public ArrayList<Evaluation> retrieveEvaluations() {
-        return new ArrayList<Evaluation>();
+        return new ArrayList<>();
     }
 
     public ArrayList<Appointment> retrieveAppointments() {
-        return new ArrayList<Appointment>();
+        return new ArrayList<>();
     }
 
     public ArrayList<Patient> retrievePatients() {
-        return new ArrayList<Patient>();
+        return new ArrayList<>();
     }
 
     public ArrayList<String> retrieveEmails() {
-        return new ArrayList<String>();
+        return new ArrayList<>();
     }
 
     public String getSurgery() {
-        return Surgery;
+        return "";
     }
 
     public String getSchedule() {
-        return Schedule;
+        return "";
     }
 
     public ArrayList<Supply> getSupplies() {
-        return Supplies;
+        return new ArrayList<>();
     }
 
     public String retrieveCryptoKey() {
