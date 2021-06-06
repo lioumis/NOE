@@ -1,6 +1,6 @@
 package gr.upatras.ceid.noe;
 
-public class Patient {
+public class Patient extends User {
 
     private Ticket ticket;
     private DischargeNote dischargeNote;

@@ -1,6 +1,6 @@
 package gr.upatras.ceid.noe;
 
-public class Employee {
+public class Employee extends User {
 
     private int salary;
     private Hospital hospital;

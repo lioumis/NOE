@@ -4,16 +4,15 @@ import java.util.HashMap;
 
 public class OrderSettings {
 
-    private HashMap<Supply, Integer> threshholds;
+    private HashMap<Supply, Integer> thresholds;
 
 
-    public HashMap<Supply, Integer> getThreshholds() {
-        return threshholds;
+    public HashMap<Supply, Integer> getThresholds() {
+        return thresholds;
     }
 
-    public void setThreshholds(HashMap<Supply, Integer> threshholds) {
-        this.threshholds = threshholds;
+    public void setThresholds(HashMap<Supply, Integer> thresholds) {
+        this.thresholds = thresholds;
     }
-
 
 }
