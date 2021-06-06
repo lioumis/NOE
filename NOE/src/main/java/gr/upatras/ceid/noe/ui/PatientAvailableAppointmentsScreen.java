@@ -1,5 +1,7 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Appointment;
+
 import java.util.ArrayList;
 
 /**
@@ -29,7 +31,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
            
        }
        
-       private boolean sendEmail(ArrayList<Appointment>, String, String){
+       private boolean sendEmail(ArrayList<Appointment> appointments, String subject, String body){
            return true;
        }
        
