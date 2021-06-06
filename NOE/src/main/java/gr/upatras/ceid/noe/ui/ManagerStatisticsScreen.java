@@ -11,6 +11,30 @@ public class ManagerStatisticsScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    public void initialize() {
+
+    }
+
+    public void update() {
+
+    }
+
+    private void notifyEmployees(){
+
+    }
+
+    private void send() {
+
+    }
+
+    private void displayStatistics() {
+
+    }
+
+    private void close() {
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

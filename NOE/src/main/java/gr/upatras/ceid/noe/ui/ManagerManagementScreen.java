@@ -1,5 +1,7 @@
 package gr.upatras.ceid.noe.ui;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Evangelos Lioumis
@@ -9,6 +11,62 @@ public class ManagerManagementScreen extends javax.swing.JFrame {
     public ManagerManagementScreen() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+
+    public void display() {
+
+    }
+
+    private void chooseDecision() {
+
+    }
+
+    private void chooseManage() {
+
+    }
+
+    private void onSearch() {
+
+    }
+
+    private void displayApplication() {
+
+    }
+
+    private void reviewApplication() {
+
+    }
+
+    private void chooseDelete() {
+
+    }
+
+    private void chooseConfirmation() {
+
+    }
+
+    private void writeReview() {
+
+    }
+
+    private void chooseSave() {
+
+    }
+
+    private void chooseStop() {
+
+    }
+
+    private void chooseApplication() {
+
+    }
+
+    private void chooseAcceptOrReject() {
+
+    }
+
+    private boolean sendEmail(ArrayList<String> recepients, String subject, String body) {
+        return true;
     }
 
     /**
