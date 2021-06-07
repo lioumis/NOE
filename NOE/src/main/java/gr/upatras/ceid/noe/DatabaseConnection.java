@@ -1,7 +1,8 @@
 package gr.upatras.ceid.noe;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -108,5 +109,49 @@ public class DatabaseConnection {
         return null;
     }
 
+    public String retrieveUserPassword(String username) throws NOEAuthenticationException {
+        String query = "SELECT password FROM user WHERE user.id_number LIKE '" + username + "' OR user.afm LIKE '" + username + "';";
+        Connection connection = connect();
 
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                rs.close();
+                pst.close();
+                connection.close();
+                return rs.getString(1);
+            } else {
+                rs.close();
+                pst.close();
+                connection.close();
+                throw new NOEAuthenticationException();
+            }
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+        }
+
+        return "";
+    }
+
+    public ArrayList<String> retrieveUserRoles(String username) {
+        String query = "SELECT roles.roleId FROM user INNER JOIN roles ON user.amka = roles.u_amka WHERE user.id_number LIKE '" + username + "' OR user.afm LIKE '" + username + "';";
+        ArrayList<String> roles = new ArrayList<>();
+        Connection connection = connect();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                roles.add(rs.getString(1));
+            }
+            rs.close();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+        }
+
+        return roles;
+    }
 }

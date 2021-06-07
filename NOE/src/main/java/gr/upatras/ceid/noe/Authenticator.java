@@ -1,5 +1,7 @@
 package gr.upatras.ceid.noe;
 
+import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
+
 import java.util.ArrayList;
 
 public class Authenticator {
@@ -50,4 +52,38 @@ public class Authenticator {
         this.failedAttempts = failedAttempts;
     }
 
+    public boolean authenticate() {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        String userPassword = "";
+        ArrayList<String> userRoles = new ArrayList<>();
+
+        try {
+            userPassword = databaseConnection.retrieveUserPassword(username);
+            passwordsMatch(this.password, userPassword);
+        } catch (NOEAuthenticationException e) {
+            MessageHelper.showErrorMessage("Τα στοιχεία είναι εσφαλμένα");
+            return false;
+        }
+
+        try {
+            userRoles = databaseConnection.retrieveUserRoles(username);
+            if (containsImportantRole(userRoles)) {
+                //TODO: 2 Factor Authentication
+            }
+        } catch (Exception e) {
+            MessageHelper.showErrorMessage("Εσφαλμένος κωδικός");
+            return false;
+        }
+        return true;
+    }
+
+    private void passwordsMatch(String password, String userPassword) throws NOEAuthenticationException {
+        if (!password.equals(userPassword)) {
+            throw new NOEAuthenticationException();
+        }
+    }
+
+    private boolean containsImportantRole(ArrayList<String> roles) {
+        return roles.contains("2") || roles.contains("3") || roles.contains("4") || roles.contains("5");
+    }
 }

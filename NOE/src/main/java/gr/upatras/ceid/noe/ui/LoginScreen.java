@@ -1,5 +1,9 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Authenticator;
+
+import java.util.Arrays;
+
 /**
  *
  * @author Evangelos Lioumis
@@ -129,8 +133,13 @@ public class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RoleScreen.main(null); //TODO: Testing
-        this.dispose(); //TODO: Testing
+        Authenticator authenticator = new Authenticator();
+        authenticator.setUsername(jTextField1.getText());
+        authenticator.setPassword(String.valueOf(jPasswordField1.getPassword()));
+        if(authenticator.authenticate()){
+            RoleScreen.main(null);
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
