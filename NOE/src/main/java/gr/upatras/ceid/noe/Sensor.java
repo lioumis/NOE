@@ -1,22 +1,21 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author NickSxiz
  */
 public class Sensor {
 
 
-    public void activate(){
+    public void activate() {
     }
 
-    public String getData(){
+    public String getData() {
         return new String();
     }
 
     public void deactivate() {
     }
 
-    public void restart(){
+    public void restart() {
     }
 }

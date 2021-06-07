@@ -1,10 +1,9 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author NickSxiz
  */
-public class Doctor {
+public class Doctor extends Employee {
     private String speciality;
 
     public String getSpeciality() {
@@ -14,7 +13,6 @@ public class Doctor {
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
-
 
 
     public Doctor getDoctor(Doctor Doctor) {

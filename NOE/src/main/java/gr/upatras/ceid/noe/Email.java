@@ -1,23 +1,20 @@
 package gr.upatras.ceid.noe;
 
+import java.util.ArrayList;
+
 public class Email {
 
 
-    private String ArrayList;
+    private ArrayList<String> recepients;
     private String subject;
     private String body;
-    public void send(){}
 
-    public String getArrayList() {
-        return ArrayList;
+    public ArrayList<String> getRecepients() {
+        return recepients;
     }
 
-    public void setArrayList(String arrayList) {
-        ArrayList = arrayList;
-    }
-
-    <String> java.lang.String recepients(){
-        return ArrayList;
+    public void setRecepients(ArrayList<String> recepients) {
+        this.recepients = recepients;
     }
 
     public String getSubject() {
@@ -28,7 +25,6 @@ public class Email {
         this.subject = subject;
     }
 
-
     public String getBody() {
         return body;
     }
@@ -37,6 +33,8 @@ public class Email {
         this.body = body;
     }
 
+    public void send() {
+    }
 }
 
 

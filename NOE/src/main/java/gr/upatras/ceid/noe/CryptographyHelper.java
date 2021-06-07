@@ -4,11 +4,11 @@ public class CryptographyHelper {
 
     private String key;
 
-    public String encrypt(){
+    public String encrypt() {
         return null;
     }
 
-    public String decrypt(){
+    public String decrypt() {
         return null;
     }
 

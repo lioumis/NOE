@@ -1,8 +1,9 @@
 package gr.upatras.ceid.noe;
-import java.util.*;
+
 import java.time.LocalDateTime;
+import java.util.HashMap;
+
 /**
- *
  * @author NickSxiz
  */
 public class Schedule {
@@ -37,7 +38,7 @@ public class Schedule {
         this.surgeries = surgeries;
     }
 
-    public Schedule getSchedule(){
+    public Schedule getSchedule() {
         return new Schedule();
     }
 }

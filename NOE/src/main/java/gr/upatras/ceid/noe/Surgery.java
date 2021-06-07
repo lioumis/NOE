@@ -1,8 +1,9 @@
 package gr.upatras.ceid.noe;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
 /**
- *
  * @author NickSxiz
  */
 public class Surgery {
@@ -43,7 +44,7 @@ public class Surgery {
         this.patient = patient;
     }
 
-    public String getSurgery(){
+    public String getSurgery() {
         return new String();
     }
 

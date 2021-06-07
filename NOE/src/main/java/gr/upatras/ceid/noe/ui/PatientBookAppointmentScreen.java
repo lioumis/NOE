@@ -11,40 +11,41 @@ public class PatientBookAppointmentScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
-    public void display(){
+    public void display() {
         
     }
     
-    private void chooseHospital(){
+    private void chooseHospital() {
         
     }
-     private void chooseSpecialization(){
+     private void chooseSpecialization() {
          
      }
      
-     private void chooseDate(){
+     private void chooseDate() {
          
      }
      
-     private void chooseFindAppointment(){
+     private void chooseFindAppointment() {
          
      }
      
-     private void chooseClear(){
+     private void chooseClear() {
          
      }
      
-     private void cancelChoices(){
+     private void cancelChoices() {
          
      }
      
-     private void calculateDateAndTime(){
+     private void calculateDateAndTime() {
          
      }
      
-     private void changeChoices(){
+     private void changeChoices() {
          
      }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

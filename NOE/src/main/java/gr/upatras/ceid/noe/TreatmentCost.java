@@ -4,7 +4,6 @@ package gr.upatras.ceid.noe;
 import java.util.HashMap;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class TreatmentCost {
@@ -14,14 +13,14 @@ public class TreatmentCost {
         return costs;
     }
 
-    
+
     public void setCosts(HashMap<String, Float> costs) {
         this.costs = costs;
     }
-    
-   public void updateCost(){
-   
-   }
 
-    
+    public void updateCost() {
+
+    }
+
+
 }

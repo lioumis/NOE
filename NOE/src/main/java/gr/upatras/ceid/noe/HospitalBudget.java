@@ -2,7 +2,6 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class HospitalBudget {
@@ -51,16 +50,15 @@ public class HospitalBudget {
     public void setEquipmentCosts(float equipmentCosts) {
         this.equipmentCosts = equipmentCosts;
     }
-    
-    
-    public void initializeBudget(){
-        
+
+
+    public void initializeBudget() {
+
     }
-    
-    private void calculate(){
-    
+
+    private void calculate() {
+
     }
-    
-   
-    
+
+
 }

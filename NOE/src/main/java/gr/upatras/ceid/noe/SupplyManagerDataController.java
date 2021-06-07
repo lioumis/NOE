@@ -2,19 +2,18 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class SupplyManagerDataController {
-    public void askData(){
-        
+    public void askData() {
+
     }
-    
-    private void calculate(){
-        
+
+    private void calculate() {
+
     }
-    
-    public void create(){
-        
+
+    public void create() {
+
     }
 }

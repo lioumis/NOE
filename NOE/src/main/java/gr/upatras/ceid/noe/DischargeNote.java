@@ -4,7 +4,6 @@ package gr.upatras.ceid.noe;
 import java.util.ArrayList;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class DischargeNote {
@@ -17,7 +16,6 @@ public class DischargeNote {
     public void setDiseases(ArrayList<String> diseases) {
         this.diseases = diseases;
     }
-    
 
-   
+
 }

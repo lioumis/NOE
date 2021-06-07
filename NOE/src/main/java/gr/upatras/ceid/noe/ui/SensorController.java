@@ -17,22 +17,24 @@ public class SensorController extends javax.swing.JFrame {
     public SensorController() {
         initComponents();
     }
-    private void activate(){
+
+    private void activate() {
         
     }
     
     
-    private void deactivate(){
+    private void deactivate() {
         
     }
     
-    private void askData(){
+    private void askData() {
         
     }
     
-    private void restart(){
+    private void restart() {
         
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

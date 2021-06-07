@@ -1,9 +1,8 @@
 package gr.upatras.ceid.noe;
 
 /**
- *
  * @author NickSxiz
  */
-public class SupplyManager {
+public class SupplyManager extends Employee {
 
 }

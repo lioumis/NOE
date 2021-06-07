@@ -1,10 +1,25 @@
 package gr.upatras.ceid.noe;
 
-public class MessageHelper{
+import javax.swing.*;
 
-    public String showSuccessMessage;
-    public String showErrorMessage;
-    public boolean showEvaluationProposalMessage;
-    public boolean showConfirmationMessage;
-    private void close(){}
+public class MessageHelper {
+
+    public static void showSuccessMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+    public static void showErrorMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+    public static boolean showEvaluationProposalMessage(String message) {
+        return true;
+    }
+
+    public static boolean showConfirmationMessage(String message) {
+        return true;
+    }
+
+    private void close() {
+    }
 }

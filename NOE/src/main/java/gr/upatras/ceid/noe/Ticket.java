@@ -4,7 +4,6 @@ package gr.upatras.ceid.noe;
 import java.util.Date;
 
 /**
- *
  * @author Emmanouil Boursalis
  */
 public class Ticket {
@@ -35,6 +34,6 @@ public class Ticket {
     public void setResponsibleDoctor(Doctor responsibleDoctor) {
         this.responsibleDoctor = responsibleDoctor;
     }
-    
-    
+
+
 }

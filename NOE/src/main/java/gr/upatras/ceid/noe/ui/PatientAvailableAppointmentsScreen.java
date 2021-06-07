@@ -15,23 +15,23 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-       public void display(){
+       public void display() {
            
        }
        
-       private void chooseDateAndTime(){
+       private void chooseDateAndTime() {
            
        }
        
-       private void chooseBookAppointment(){
+       private void chooseBookAppointment() {
            
        }
        
-       private void chooseNewSearch(){
+       private void chooseNewSearch() {
            
        }
        
-       private boolean sendEmail(ArrayList<Appointment> appointments, String subject, String body){
+       private boolean sendEmail(ArrayList<String> recepients, String subject, String body) {
            return true;
        }
        
