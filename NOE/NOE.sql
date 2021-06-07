@@ -326,3 +326,35 @@ create table login_history
     datetime          datetime,
     primary key (aa)
 )
+    ENGINE = InnoDB
+    CHARACTER SET greek
+    COLLATE greek_general_ci;
+
+#TEST DATA
+INSERT INTO user
+VALUES ('123456789', 'AK123456', 'password', '12345678901', 'TestName', 'TestSName', 'TestFName', '6912345678',
+        'test@test.test');
+
+INSERT INTO patient
+VALUES ('12345678901', null, null, null);
+
+INSERT INTO hospital
+VALUES ('Test hospital name', 'Test hospital address', '12345678901', true, 70, 320);
+
+INSERT INTO employee
+VALUES ('12345678901', 'Test Department', 'Test hospital name', 5000);
+
+INSERT INTO roles
+VALUES ('12345678901', 1);
+
+INSERT INTO roles
+VALUES ('12345678901', 2);
+
+INSERT INTO roles
+VALUES ('12345678901', 3);
+
+INSERT INTO roles
+VALUES ('12345678901', 4);
+
+INSERT INTO roles
+VALUES ('12345678901', 5);
