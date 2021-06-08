@@ -15,7 +15,7 @@ public class Doctor extends Employee {
     }
 
 
-    public Doctor getDoctor(Doctor Doctor) {
-        return Doctor;
+    public Doctor getDoctor() {
+        return this;
     }
 }

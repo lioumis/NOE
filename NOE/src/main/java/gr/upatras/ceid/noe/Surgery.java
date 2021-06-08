@@ -44,8 +44,8 @@ public class Surgery {
         this.patient = patient;
     }
 
-    public String getSurgery() {
-        return new String();
+    public Surgery getSurgery() {
+        return this;
     }
 
 }

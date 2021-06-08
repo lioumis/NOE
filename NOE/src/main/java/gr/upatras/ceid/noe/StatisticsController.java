@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * @author Evangelos Lioumis
  */
 public class StatisticsController {
+
     public void calculateStatistics() {
 
     }
