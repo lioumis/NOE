@@ -15,7 +15,7 @@ public class BudgetController {
         return hospitalBudget.getTotalBudget();
     }
 
-    public void updateBudget(HospitalBudget budget) {
+    public void updateBudget(HospitalBudget budget) { //TODO: Class
         if (validateNotEmpty(budget)) {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.updateBudgetInfo(budget);
