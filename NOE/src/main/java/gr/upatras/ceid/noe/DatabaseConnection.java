@@ -1,7 +1,9 @@
 package gr.upatras.ceid.noe;
 
 import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
 
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +15,7 @@ public class DatabaseConnection {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "password";
     private static final String ERROR_MESSAGE = "Η σύνδεση με τη βάση δεδομένων απέτυχε!";
+    private static final String DATABASE_ERROR_MESSAGE = "Σφάλμα της βάσης δεδομένων";
 
 
     public static Connection connect() {
@@ -31,7 +34,7 @@ public class DatabaseConnection {
         return 0;
     }
 
-    public HashMap<String, Integer> RetrieveDiseases() {
+    public HashMap<String, Integer> retrieveDiseases() {
         return new HashMap<String, Integer>();
     }
 
@@ -117,11 +120,10 @@ public class DatabaseConnection {
             PreparedStatement pst = connection.prepareStatement(query);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                String result = rs.getString(1);
                 rs.close();
                 pst.close();
                 connection.close();
-                return result;
+                return rs.getString(1);
             } else {
                 rs.close();
                 pst.close();
@@ -129,7 +131,7 @@ public class DatabaseConnection {
                 throw new NOEAuthenticationException();
             }
         } catch (SQLException e) {
-            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+            MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
         }
 
         return "";
@@ -150,9 +152,71 @@ public class DatabaseConnection {
             pst.close();
             connection.close();
         } catch (SQLException e) {
-            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+            MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
         }
 
         return roles;
+    }
+
+    public void deleteApplication(Application application) {  //TODO: New method
+        String update = "DELETE FROM application WHERE email LIKE '" + application.getEmail() + "';";
+        Connection connection = connect();
+        try {
+            PreparedStatement pst = connection.prepareStatement(update);
+            pst.executeUpdate();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
+        }
+    }
+
+    public Application retrieveApplication(String name, String surname) { //TODO: New method
+        String query = "SELECT name, surname, email, application, evaluated, review, accepted FROM application WHERE name LIKE '" + name + "' AND surname LIKE '" + surname + "';";
+        Connection connection = connect();
+        Application application = new Application();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                application.setName(rs.getString(1));
+                application.setSurname(rs.getString(2));
+                application.setEmail(rs.getString(3));
+                application.setRecruitmentApplication(new File(rs.getString(4)));
+                boolean evaluated;
+                evaluated = !rs.getString(5).equals("0");
+                application.setEvaluated(evaluated);
+                application.setReview(rs.getString(6));
+                boolean accepted;
+                accepted = !rs.getString(7).equals("0");
+                application.setAccepted(accepted);
+            }
+            rs.close();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
+        }
+
+        return application;
+    }
+
+    public void saveApplication(Application application) { //TODO: New method
+        boolean evaluated = application.isEvaluated();
+        String review = application.getReview();
+        boolean accepted = application.isAccepted();
+        String email = application.getEmail();
+        String update = "UPDATE application SET evaluated = " + evaluated + ", review = " + review + ", accepted = " + accepted + " WHERE email LIKE '" + email + "';";
+        Connection connection = connect();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(update);
+            pst.executeUpdate();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
+        }
     }
 }
