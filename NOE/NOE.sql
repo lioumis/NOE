@@ -179,9 +179,11 @@ create table appointment
 
 create table supply
 (
-    name  varchar(30),
-    price int,
-    primary key (name)
+    name     varchar(30),
+    code     varchar(30),
+    price    int,
+    quantity int,
+    primary key (code)
 )
     ENGINE = InnoDB
     CHARACTER SET greek
@@ -208,7 +210,7 @@ create table supp_order_item
     quantity   int not null,
     primary key (supp_order, supply),
     constraint supp_order_item_supp_order foreign key (supp_order) references supp_order (aa) on delete cascade on update cascade,
-    constraint supp_order_item_supply foreign key (supply) references supply (name) on delete cascade on update cascade
+    constraint supp_order_item_supply foreign key (supply) references supply (code) on delete cascade on update cascade
 )
     ENGINE = InnoDB
     CHARACTER SET greek
@@ -242,7 +244,7 @@ create table hospital_supplies
     quantity int,
     primary key (hospital, supply),
     constraint hospital_supplies_hospital foreign key (hospital) references hospital (name) on delete cascade on update cascade,
-    constraint hospital_supplies_supply foreign key (supply) references supply (name) on delete cascade on update cascade
+    constraint hospital_supplies_supply foreign key (supply) references supply (code) on delete cascade on update cascade
 )
     ENGINE = InnoDB
     CHARACTER SET greek

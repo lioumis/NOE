@@ -28,7 +28,8 @@ public class Order {
     }
 
     public void save() {
-
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.saveOrder(this);
     }
 
 

@@ -273,4 +273,13 @@ public class DatabaseConnection {
     public void saveEvaluation(Evaluation evaluation) { //TODO: Class
         //Store doctor evaluation from patient
     }
+
+    public void saveOrder(Order order) { //TODO: Class
+        //Save a supply order
+    }
+
+    public Supply retrieveSupply(String code){ //TODO: Class
+        //Retrieve supply name and quantity
+        return new Supply();
+    }
 }
