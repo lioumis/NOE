@@ -88,11 +88,13 @@ public class DatabaseConnection {
         return new ArrayList<>();
     }
 
-    public ArrayList<Evaluation> retrieveEvaluations() {
+    public ArrayList<Evaluation> retrieveEvaluations(String doctor) { //TODO: Class
+        //Retrieve all evaluations of the doctor
         return new ArrayList<>();
     }
 
-    public ArrayList<Appointment> retrieveAppointments() {
+    public ArrayList<Appointment> retrieveAppointments(String doctor, String patient) { //TODO: Class
+        //Retrieve all appointments of the doctor
         return new ArrayList<>();
     }
 
@@ -266,5 +268,9 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
         }
+    }
+
+    public void saveEvaluation(Evaluation evaluation) { //TODO: Class
+        //Store doctor evaluation from patient
     }
 }

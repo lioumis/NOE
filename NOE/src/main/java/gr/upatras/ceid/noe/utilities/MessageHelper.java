@@ -15,7 +15,9 @@ public class MessageHelper {
     }
 
     public static boolean showEvaluationProposalMessage(String message) {
-        return true;
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, message, CONFIRMATION, dialogButton);
+        return dialogResult == 0;
     }
 
     public static boolean showConfirmationMessage(String message) {

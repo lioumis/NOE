@@ -5,17 +5,18 @@ package gr.upatras.ceid.noe;
  */
 public class FormController {
 
-    public boolean checkForErrors() {
+    public boolean checkForErrors(Evaluation evaluation) { //TODO: Class
         return true;
 
     }
 
-    public boolean checkForEmpties() {
+    public boolean checkForEmpties(Evaluation evaluation) { //TODO: Class
         return true;
 
     }
 
-    public void save() {
-
+    public void save(Evaluation evaluation) { //TODO: Class
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.saveEvaluation(evaluation);
     }
 }
