@@ -35,7 +35,9 @@ public class Schedule {
         this.surgeries = surgeries;
     }
 
-    public Schedule getSchedule() {
+    public Schedule getSchedule(String doctor) { //TODO: Domain
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        Schedule schedule = databaseConnection.getSchedule(doctor);
         return this;
     }
 }

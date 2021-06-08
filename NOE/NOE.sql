@@ -252,10 +252,10 @@ create table schedule
 (
     aa          int auto_increment,
     doctor      varchar(15),
-    start       datetime                                                not null,
-    end         datetime                                                not null,
+    start       datetime                                       not null,
+    end         datetime                                       not null,
     description varchar(40),
-    type        enum ('appointment', 'surgery', 'unavailable', 'other') not null,
+    type        enum ('appointment', 'surgery', 'unavailable') not null,
     primary key (aa),
     constraint schedule_doctor foreign key (doctor) references employee (e_amka) on delete cascade on update cascade
 )

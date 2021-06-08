@@ -1,6 +1,7 @@
 package gr.upatras.ceid.noe;
 
 import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
+import gr.upatras.ceid.noe.utilities.DateHelper;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.io.File;
@@ -100,8 +101,48 @@ public class DatabaseConnection {
         return "";
     }
 
-    public String getSchedule() {
-        return "";
+    public Schedule getSchedule(String amka) { //TODO: Domain
+        String query = "SELECT start, end, description, type FROM schedule WHERE doctor LIKE '" + amka + "';";
+        Schedule schedule = new Schedule();
+        Connection connection = connect();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                switch (rs.getString(4)) {
+                    case "appointment":
+                        Appointment appointment = new Appointment();
+                        appointment.setDate(DateHelper.dateFromSQLDateTime(rs.getString(1)));
+                        appointment.setTime(DateHelper.localTimeFromSQLDateTime(rs.getString(1)));
+                        schedule.getAppointments().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), appointment);
+                        break;
+                    case "surgery":
+                        Surgery surgery = new Surgery();
+                        surgery.setDateTime(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)));
+                        surgery.setDuration(DateHelper.calculateDuration(DateHelper.localTimeFromSQLDateTime(rs.getString(1)), DateHelper.localTimeFromSQLDateTime(rs.getString(2))));
+                        schedule.getSurgeries().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), surgery);
+                        break;
+                    case "unavailable":
+                        schedule.getUnavailable().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), DateHelper.localDateTimeFromSQLDateTime(rs.getString(2)));
+                }
+            }
+            rs.close();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+        }
+
+        return schedule;
+    }
+
+    public void updateAppointments(Appointment appointment) { //TODO: Class
+        //Update
+    }
+
+    public void removeAppointment(Appointment appointment) { //TODO: Class
+        //Remove
     }
 
     public ArrayList<Supply> getSupplies() {
