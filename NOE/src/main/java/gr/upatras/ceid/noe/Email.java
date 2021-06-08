@@ -5,17 +5,17 @@ import java.util.ArrayList;
 public class Email {
 
 
-    private ArrayList<String> recepients;
+    private ArrayList<String> recipients; //TODO: Class
     private String subject;
     private String body;
 
-    public ArrayList<String> getRecepients() {
-        return recepients;
-    }
+    public ArrayList<String> getRecipients() {
+        return recipients;
+    } //TODO: Class
 
-    public void setRecepients(ArrayList<String> recepients) {
-        this.recepients = recepients;
-    }
+    public void setRecipients(ArrayList<String> recipients) {
+        this.recipients = recipients;
+    } //TODO: Class
 
     public String getSubject() {
         return subject;
@@ -33,7 +33,8 @@ public class Email {
         this.body = body;
     }
 
-    public void send() {
+    public boolean send() { //TODO: Class
+        return true;
     }
 }
 

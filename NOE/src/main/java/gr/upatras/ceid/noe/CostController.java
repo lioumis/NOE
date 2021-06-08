@@ -11,7 +11,7 @@ public class CostController {
         return new TreatmentCost();
     }
 
-    public boolean createEmail(ArrayList<String> recepients, String subject, String body) {
+    public boolean createEmail(ArrayList<String> recipients, String subject, String body) {
         return true;
     }
 

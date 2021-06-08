@@ -65,7 +65,7 @@ public class ManagerManagementScreen extends javax.swing.JFrame {
 
     }
 
-    private boolean sendEmail(ArrayList<String> recepients, String subject, String body) {
+    private boolean sendEmail(ArrayList<String> recipients, String subject, String body) {
         return true;
     }
 

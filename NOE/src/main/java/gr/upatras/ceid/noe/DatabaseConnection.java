@@ -59,7 +59,9 @@ public class DatabaseConnection {
         return null;
     }
 
-    public void retrieveBudgetInfo() {
+    public HospitalBudget retrieveBudgetInfo(String hospital) { //TODO: Class
+        //Retrieve Budget
+        return new HospitalBudget();
     }
 
     public void updateBudgetInfo(HospitalBudget budget) {
