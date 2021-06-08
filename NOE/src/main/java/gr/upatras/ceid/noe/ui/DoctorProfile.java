@@ -132,6 +132,7 @@ public class DoctorProfile extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Μάθετε περισσότερα για τον ιατρό σας ");
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
