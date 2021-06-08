@@ -1,5 +1,8 @@
-package gr.upatras.ceid.noe;
+package gr.upatras.ceid.noe.controllers;
 
+import gr.upatras.ceid.noe.Email;
+import gr.upatras.ceid.noe.HospitalBudget;
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.util.ArrayList;

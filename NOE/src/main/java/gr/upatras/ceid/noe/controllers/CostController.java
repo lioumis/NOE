@@ -1,5 +1,8 @@
-package gr.upatras.ceid.noe;
+package gr.upatras.ceid.noe.controllers;
 
+import gr.upatras.ceid.noe.Patient;
+import gr.upatras.ceid.noe.TreatmentCost;
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.io.File;
@@ -11,11 +14,11 @@ import java.util.HashMap;
  */
 public class CostController {
     public File generateCost(String patientName) { //TODO Add to class diagram
-        if(validateNotEmpty(patientName) && validateCorrect(patientName)){
+        if (validateNotEmpty(patientName) && validateCorrect(patientName)) {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Patient patient = databaseConnection.searchPatient(patientName);
             boolean confirmation = MessageHelper.showConfirmationMessage("Ο ασθενής βρέθηκε. Συνέχεια;");
-            if(confirmation){
+            if (confirmation) {
                 TreatmentCost treatmentCost = databaseConnection.searchHospitalizationCost(patient.getAfm());
                 float total = calculateCost(treatmentCost);
                 File receipt = generateReceipt(total, treatmentCost);
@@ -32,7 +35,7 @@ public class CostController {
     }
 
     private boolean validateNotEmpty(String patient) {
-        if(patient == null || patient.equals("")){
+        if (patient == null || patient.equals("")) {
             MessageHelper.showErrorMessage("Συμπληρώστε τα δεδομένα!");
             return false;
         } else {
@@ -47,7 +50,7 @@ public class CostController {
     private float calculateCost(TreatmentCost treatmentCost) { //TODO Add to class diagram
         HashMap<String, Float> costs = treatmentCost.getCosts();
         float totalCost = 0;
-        for(float cost: costs.values()){
+        for (float cost : costs.values()) {
             totalCost = totalCost + cost;
         }
         return totalCost;

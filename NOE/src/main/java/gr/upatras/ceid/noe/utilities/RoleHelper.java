@@ -3,10 +3,10 @@ package gr.upatras.ceid.noe.utilities;
 import java.util.ArrayList;
 
 public class RoleHelper {
-    public static ArrayList<String> mapRoles(ArrayList<String> roleIds){
+    public static ArrayList<String> mapRoles(ArrayList<String> roleIds) {
         ArrayList<String> roles = new ArrayList<>();
         for (String roleId : roleIds) {
-            switch (Integer.parseInt(roleId)){
+            switch (Integer.parseInt(roleId)) {
                 case 1:
                     roles.add("Ασθενής");
                     break;

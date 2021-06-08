@@ -44,5 +44,4 @@ public class Supply {
     public void create() {
         //Create
     }
-
 }

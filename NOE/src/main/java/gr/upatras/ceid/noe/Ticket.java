@@ -34,6 +34,4 @@ public class Ticket {
     public void setResponsibleDoctor(Doctor responsibleDoctor) {
         this.responsibleDoctor = responsibleDoctor;
     }
-
-
 }
