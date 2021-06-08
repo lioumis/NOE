@@ -67,16 +67,21 @@ public class DatabaseConnection {
     public void updateBudgetInfo(HospitalBudget budget) {
     }
 
-    public String searchPatient() {
-        return "";
+    public Patient searchPatient(String patient) { //TODO Update class diagram
+        String name = patient.split(" ")[0];
+        String surname = patient.split(" ")[1];
+        //Search for the patient
+        return new Patient();
     }
 
-    public TreatmentCost searchHospitalizationCost() {
+    public TreatmentCost searchHospitalizationCost(String afm) { //TODO Update class diagram
+        //Retrieve hospitalization cost
         return new TreatmentCost();
     }
 
-    public TreatmentCost updateCost() {
-        return null;
+    public void updateCost(TreatmentCost treatmentCost) { //TODO Add to class diagram
+        float totalCost = treatmentCost.getTotalCost();
+        //Store total cost at hospitalization
     }
 
     public ArrayList<Doctor> retrieveDoctors() {

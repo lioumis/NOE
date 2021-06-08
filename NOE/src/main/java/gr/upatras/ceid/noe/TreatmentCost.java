@@ -8,19 +8,26 @@ import java.util.HashMap;
  */
 public class TreatmentCost {
     private HashMap<String, Float> costs;
+    private float totalCost; //TODO Add to class diagram
 
     public HashMap<String, Float> getCosts() {
         return costs;
     }
 
-
     public void setCosts(HashMap<String, Float> costs) {
         this.costs = costs;
     }
 
-    public void updateCost() {
-
+    public float getTotalCost() { //TODO Add to class diagram
+        return totalCost;
     }
 
+    public void setTotalCost(float totalCost) { //TODO Add to class diagram
+        this.totalCost = totalCost;
+    }
 
+    public void updateCost() {
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.updateCost(this);
+    }
 }
