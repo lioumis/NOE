@@ -11,7 +11,7 @@ public class Sensor {
 
     public String getData() {
         return new String();
-    }
+    } //TODO class
 
     public void deactivate() {
     }

@@ -8,6 +8,8 @@ import java.util.HashMap;
  */
 public class Schedule {
     private HashMap<LocalDateTime, Appointment> appointments;
+    private HashMap<LocalDateTime, Surgery> surgeries;
+    private HashMap<LocalDateTime, LocalDateTime> unavailable;
 
     public HashMap<LocalDateTime, Appointment> getAppointments() {
         return appointments;
@@ -16,11 +18,6 @@ public class Schedule {
     public void setAppointments(HashMap<LocalDateTime, Appointment> appointments) {
         this.appointments = appointments;
     }
-
-    private HashMap<LocalDateTime, Surgery> surgeries;
-
-    private HashMap<LocalDateTime, LocalDateTime> unavailable;
-
 
     public HashMap<LocalDateTime, LocalDateTime> getUnavailable() {
         return unavailable;
@@ -39,6 +36,6 @@ public class Schedule {
     }
 
     public Schedule getSchedule() {
-        return new Schedule();
+        return this;
     }
 }

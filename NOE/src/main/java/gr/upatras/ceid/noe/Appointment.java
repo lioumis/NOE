@@ -5,11 +5,9 @@
  */
 package gr.upatras.ceid.noe;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 
 /**
  * @author NickSxiz
@@ -22,7 +20,6 @@ public class Appointment {
     private Doctor doctor;
     private Patient patient;
     private ArrayList<Appointment> appointments;
-    private HashMap<LocalDateTime, LocalDateTime> unavailable;
 
     public Date getDate() {
         return date;
@@ -90,9 +87,7 @@ public class Appointment {
     }
 
     public boolean isCorrect() {
-
         return true;
-
     }
 
     public boolean okData() {
@@ -100,7 +95,7 @@ public class Appointment {
     }
 
     public Appointment getAppointment() {
-        return new Appointment();
+        return this;
     }
 
     private void save() {

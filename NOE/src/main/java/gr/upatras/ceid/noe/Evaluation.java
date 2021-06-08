@@ -5,11 +5,8 @@ package gr.upatras.ceid.noe;
  */
 public class Evaluation {
     private Doctor doctor;
-
     private Patient patient;
-
     private int rating;
-
     private String comment;
 
     public Doctor getDoctor() {
@@ -45,7 +42,7 @@ public class Evaluation {
     }
 
     public Evaluation getEvaluation() {
-        return new Evaluation();
+        return this;
     }
 
 

@@ -17,5 +17,4 @@ public class DischargeNote {
         this.diseases = diseases;
     }
 
-
 }
