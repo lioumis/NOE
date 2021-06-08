@@ -1,6 +1,7 @@
 package gr.upatras.ceid.noe;
 
 import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
+import gr.upatras.ceid.noe.utilities.DateHelper;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.io.File;
@@ -58,33 +59,42 @@ public class DatabaseConnection {
         return null;
     }
 
-    public void retrieveBudgetInfo() {
+    public HospitalBudget retrieveBudgetInfo(String hospital) { //TODO: Class
+        //Retrieve Budget
+        return new HospitalBudget();
     }
 
     public void updateBudgetInfo(HospitalBudget budget) {
     }
 
-    public String searchPatient() {
-        return "";
+    public Patient searchPatient(String patient) { //TODO Update class diagram
+        String name = patient.split(" ")[0];
+        String surname = patient.split(" ")[1];
+        //Search for the patient
+        return new Patient();
     }
 
-    public TreatmentCost searchHospitalizationCost() {
+    public TreatmentCost searchHospitalizationCost(String afm) { //TODO Update class diagram
+        //Retrieve hospitalization cost
         return new TreatmentCost();
     }
 
-    public TreatmentCost updateCost() {
-        return null;
+    public void updateCost(TreatmentCost treatmentCost) { //TODO Add to class diagram
+        float totalCost = treatmentCost.getTotalCost();
+        //Store total cost at hospitalization
     }
 
     public ArrayList<Doctor> retrieveDoctors() {
         return new ArrayList<>();
     }
 
-    public ArrayList<Evaluation> retrieveEvaluations() {
+    public ArrayList<Evaluation> retrieveEvaluations(String doctor) { //TODO: Class
+        //Retrieve all evaluations of the doctor
         return new ArrayList<>();
     }
 
-    public ArrayList<Appointment> retrieveAppointments() {
+    public ArrayList<Appointment> retrieveAppointments(String doctor, String patient) { //TODO: Class
+        //Retrieve all appointments of the doctor
         return new ArrayList<>();
     }
 
@@ -100,8 +110,48 @@ public class DatabaseConnection {
         return "";
     }
 
-    public String getSchedule() {
-        return "";
+    public Schedule getSchedule(String amka) { //TODO: Domain
+        String query = "SELECT start, end, description, type FROM schedule WHERE doctor LIKE '" + amka + "';";
+        Schedule schedule = new Schedule();
+        Connection connection = connect();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                switch (rs.getString(4)) {
+                    case "appointment":
+                        Appointment appointment = new Appointment();
+                        appointment.setDate(DateHelper.dateFromSQLDateTime(rs.getString(1)));
+                        appointment.setTime(DateHelper.localTimeFromSQLDateTime(rs.getString(1)));
+                        schedule.getAppointments().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), appointment);
+                        break;
+                    case "surgery":
+                        Surgery surgery = new Surgery();
+                        surgery.setDateTime(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)));
+                        surgery.setDuration(DateHelper.calculateDuration(DateHelper.localTimeFromSQLDateTime(rs.getString(1)), DateHelper.localTimeFromSQLDateTime(rs.getString(2))));
+                        schedule.getSurgeries().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), surgery);
+                        break;
+                    case "unavailable":
+                        schedule.getUnavailable().put(DateHelper.localDateTimeFromSQLDateTime(rs.getString(1)), DateHelper.localDateTimeFromSQLDateTime(rs.getString(2)));
+                }
+            }
+            rs.close();
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            MessageHelper.showErrorMessage("Σφάλμα της βάσης δεδομένων");
+        }
+
+        return schedule;
+    }
+
+    public void updateAppointments(Appointment appointment) { //TODO: Class
+        //Update
+    }
+
+    public void removeAppointment(Appointment appointment) { //TODO: Class
+        //Remove
     }
 
     public ArrayList<Supply> getSupplies() {
@@ -218,5 +268,9 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             MessageHelper.showErrorMessage(DATABASE_ERROR_MESSAGE);
         }
+    }
+
+    public void saveEvaluation(Evaluation evaluation) { //TODO: Class
+        //Store doctor evaluation from patient
     }
 }
