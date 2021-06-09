@@ -67,7 +67,6 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -155,6 +154,7 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
         jButton3.setText("Αποστολή");
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setText("Exit");

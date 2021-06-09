@@ -109,6 +109,7 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
         jTextField8.setText("jTextField8");
 
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -116,6 +117,7 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
         });
 
         jButton2.setBackground(new java.awt.Color(229, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Save_Icon.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setText("  Exit");
