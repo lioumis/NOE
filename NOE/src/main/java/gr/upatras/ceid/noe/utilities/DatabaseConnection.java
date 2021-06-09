@@ -169,10 +169,11 @@ public class DatabaseConnection {
             PreparedStatement pst = connection.prepareStatement(query);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
+                String password = rs.getString(1);
                 rs.close();
                 pst.close();
                 connection.close();
-                return rs.getString(1);
+                return password;
             } else {
                 rs.close();
                 pst.close();
