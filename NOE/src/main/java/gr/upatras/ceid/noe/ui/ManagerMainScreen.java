@@ -106,10 +106,10 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
         jPanel2.setBackground(new java.awt.Color(229, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(344, 1080));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Όνομα Νοσοκομείου");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setText("Όνομα Διευθυντή");
 
         jLabel3.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
@@ -159,13 +159,11 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setText("Exit");
 
         jButton5.setBackground(new java.awt.Color(229, 255, 255));
-        jButton5.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel13.setText("Save");
