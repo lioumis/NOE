@@ -1,7 +1,9 @@
 package gr.upatras.ceid.noe.ui;
 
-import gr.upatras.ceid.noe.DatabaseConnection;
-import gr.upatras.ceid.noe.MessageHelper;
+
+
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

@@ -1,6 +1,8 @@
 package gr.upatras.ceid.noe.ui;
 
 import gr.upatras.ceid.noe.*;
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -44,7 +46,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
                recipients.add(patientEmail);
                recipients.add(doctorEmail);
                Email email = new Email();
-               email.setRecepients(recipients);
+              // email.setRecepients(recipients);
                email.setSubject("Νέο ραντεβού");
                email.setBody("...");
                this.dispose();
