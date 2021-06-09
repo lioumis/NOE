@@ -64,7 +64,7 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1313, 794));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Όνομα Νοσοκομείου");
 
@@ -72,7 +72,7 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Εξιτήριο Ασθενή");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Όνομα Γραμματείας");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -197,7 +197,7 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
                         .addComponent(jLabel8)))
                 .addGap(83, 83, 83)
                 .addComponent(jButton1)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
