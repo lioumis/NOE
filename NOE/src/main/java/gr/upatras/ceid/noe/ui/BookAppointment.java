@@ -1,10 +1,20 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.DatabaseConnection;
+import gr.upatras.ceid.noe.MessageHelper;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author NickSxiz
  */
 public class BookAppointment extends javax.swing.JFrame {
+    private String hospital;
+    private String specialization;
+    private Date date;
 
     public BookAppointment() {
         initComponents();
@@ -12,38 +22,67 @@ public class BookAppointment extends javax.swing.JFrame {
     }
     
     public void display(){
-        
+        this.setVisible(true);
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        //jCombobox.setValues = databaseConnection.retrieveAvailableHospitals();
+
+        //Values for presentation
+        //jCombobox.setValues = ...
     }
     
     private void chooseHospital(){
-        
+        //this.hospital = jComboBox.getSelectedValue()...
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        //jCombobox.setValues = databaseConnection.retrieveAvailableSpecializations(this.hospital);
+
+        //Values for presentation
+        //jCombobox.setValues = ...
     }
+
      private void chooseSpecialization(){
-         
+         //this.specialization = jComboBox.getSelectedValue()...
+         DatabaseConnection databaseConnection = new DatabaseConnection();
+         //jCombobox.setValues = databaseConnection.retrieveAvailableDates(this.hospital, this.specialization);
+
+         //Values for presentation
+         //jCombobox.setValues = ...
      }
      
      private void chooseDate(){
-         
+         //this.date = jComboBox.getSelectedValue()...
      }
      
      private void chooseFindAppointment(){
-         
+         calculateDateAndTime();
      }
      
      private void chooseClear(){
-         
+         cancelChoices();
      }
      
      private void cancelChoices(){
-         
+         this.hospital = null;
+         this.specialization = null;
+         this.date = null;
+         //jCombobox.setSelectedValue = ...
+         //jCombobox.setSelectedValue = ...
+         //jCombobox.setSelectedValue = ...
      }
      
      private void calculateDateAndTime(){
-         
+         DatabaseConnection databaseConnection = new DatabaseConnection();
+         ArrayList<LocalDateTime> availableAppointments = databaseConnection.retrieveAvailableAppointments(this.hospital, this.specialization, this.date);
+         if(availableAppointments.isEmpty()){
+             MessageHelper.showErrorMessage("Δεν υπάρχουν διαθέσιμα ραντεβού");
+         }
+         //Values for presentation
+         //jCombobox.setValues = ...
+         PatientAvailableAppointmentsScreen patientAvailableAppointmentsScreen = new PatientAvailableAppointmentsScreen(availableAppointments);
+         patientAvailableAppointmentsScreen.display();
      }
      
      private void changeChoices(){
-         
+         //Change choices
      }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,17 +93,63 @@ public class BookAppointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menuBar1 = new java.awt.MenuBar();
+        menu1 = new java.awt.Menu();
+        menu2 = new java.awt.Menu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+        menu1.setLabel("File");
+        menuBar1.add(menu1);
+
+        menu2.setLabel("Edit");
+        menuBar1.add(menu2);
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1313, 794));
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(1313, 794));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Όνομα Ασθενούς");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setText("Παρακαλώ επιλέξτε ημερομηνία τοποθέτησης ραντεβού:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(0, 1008, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109)
+                .addComponent(jLabel2)
+                .addGap(0, 631, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -104,5 +189,13 @@ public class BookAppointment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private java.awt.Menu menu1;
+    private java.awt.Menu menu2;
+    private java.awt.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
 }

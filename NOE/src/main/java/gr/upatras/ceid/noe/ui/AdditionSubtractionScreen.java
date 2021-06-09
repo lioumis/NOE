@@ -18,24 +18,34 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void display(){
+    public void display(boolean add){ //TODO: Class
+        this.setVisible(true);
+        SensorController sensorController = new SensorController(); //TODO: Complete after controller gets removed from ui.
+        if(add){
+            adding();
+        } else {
+            subtracting();
+        }
+    }
+    
+    private void adding() {
         
     }
     
-    private void adding(){
+    private void subtracting() {
         
     }
     
-    private void subtracting(){
+    private void onSave() {
         
     }
     
-    private void onSave(){
+    private void displayData() {
         
     }
-    
-    private void displayData(){
-        
+
+    private void onClose() { //TODO: Class
+
     }
     /**
      * This method is called from within the constructor to initialize the form.
