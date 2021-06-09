@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class DoctorMainScreen extends javax.swing.JFrame {
+public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
 
     public DoctorMainScreen() {
         initComponents();

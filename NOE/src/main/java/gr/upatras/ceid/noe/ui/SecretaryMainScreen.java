@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class SecretaryMainScreen extends javax.swing.JFrame {
+public class SecretaryMainScreen extends javax.swing.JFrame { /*TODO*/
 
     public SecretaryMainScreen() {
         initComponents();

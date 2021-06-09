@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class ManagerMainScreen extends javax.swing.JFrame {
+public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
     public ManagerMainScreen() {
         initComponents();

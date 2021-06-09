@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class BudgetEditScreen extends javax.swing.JFrame {
+public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
 
     public BudgetEditScreen() {
         initComponents();
@@ -128,7 +128,8 @@ public class BudgetEditScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\exit22.png")); // NOI18N
+        jButton3.setBackground(new java.awt.Color(229, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -141,7 +142,8 @@ public class BudgetEditScreen extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel11.setText("Exit");
 
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\save1.png")); // NOI18N
+        jButton4.setBackground(new java.awt.Color(229, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
