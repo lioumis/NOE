@@ -162,6 +162,7 @@ public class ManagerStatisticsScreen extends javax.swing.JFrame { /*TODO*/
         jButton4.setText("Ενημέρωση Προσωπικού");
 
         jButton2.setBackground(new java.awt.Color(204, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

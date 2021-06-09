@@ -93,7 +93,7 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton4.setText("Έγκριση Προσλήψεων");
+        jButton4.setText("Διαδικασία Πρόσληψης");
         jButton4.setMaximumSize(new java.awt.Dimension(183, 25));
         jButton4.setMinimumSize(new java.awt.Dimension(183, 25));
         jButton4.setPreferredSize(new java.awt.Dimension(183, 25));
@@ -159,11 +159,13 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setText("Exit");
 
         jButton5.setBackground(new java.awt.Color(229, 255, 255));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Save_Icon.png"))); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel13.setText("Save");
@@ -247,9 +249,9 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
