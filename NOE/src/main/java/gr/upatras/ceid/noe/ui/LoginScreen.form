@@ -52,14 +52,11 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton2" max="32767" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton2" max="32767" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabel1" max="32767" attributes="0"/>
                               <Component id="jLabel2" min="-2" pref="137" max="-2" attributes="0"/>
@@ -69,9 +66,9 @@
                               <Component id="jTextField1" max="32767" attributes="0"/>
                               <Component id="jPasswordField1" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -94,7 +91,7 @@
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="69" max="32767" attributes="0"/>
+                  <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -102,6 +99,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bd;&#x3b4;&#x3b5;&#x3c3;&#x3b7;"/>
           </Properties>
           <Events>
@@ -115,6 +115,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x391;&#x3c1;&#x3b9;&#x3b8;&#x3bc;&#x3cc;&#x3c2; &#x3a4;&#x3b1;&#x3c5;&#x3c4;&#x3cc;&#x3c4;&#x3b7;&#x3c4;&#x3b1;&#x3c2; &#x3ae; &#x391;&#x3a6;&#x39c;:"/>
           </Properties>
         </Component>
@@ -125,18 +128,19 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x39a;&#x3c9;&#x3b4;&#x3b9;&#x3ba;&#x3cc;&#x3c2; &#x3c0;&#x3c1;&#x3cc;&#x3c3;&#x3b2;&#x3b1;&#x3c3;&#x3b7;&#x3c2;:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\NOE\noe\NOE\src\main\java\gr\upatras\ceid\noe\recources\ddb1c847bc904755be586a267984f2d6.png"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x395;&#x3b3;&#x3b3;&#x3c1;&#x3b1;&#x3c6;&#x3ae;"/>
           </Properties>
         </Component>
