@@ -1,7 +1,8 @@
 package gr.upatras.ceid.noe.ui;
 
-import gr.upatras.ceid.noe.Appointment;
+import gr.upatras.ceid.noe.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**
@@ -9,25 +10,48 @@ import java.util.ArrayList;
  * @author NickSxiz
  */
 public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
+    private ArrayList<LocalDateTime> appointments;
 
     public PatientAvailableAppointmentsScreen() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
+    public PatientAvailableAppointmentsScreen(ArrayList<LocalDateTime> appointments) {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        this.appointments = appointments;
+        //Present appointments
+    }
+
        public void display() {
-           
+           this.setVisible(true);
        }
        
        private void chooseDateAndTime() {
-           
+           //TODO: Enable book button
        }
        
        private void chooseBookAppointment() {
-           
+           if(MessageHelper.showConfirmationMessage("Κλείσιμο ραντεβού;")){
+               //TODO: Save appointment
+               DatabaseConnection databaseConnection = new DatabaseConnection();
+               String patient = "";
+               String doctor = "";
+               String patientEmail = databaseConnection.retrievePatientEmail(patient);
+               String doctorEmail = databaseConnection.retrieveDoctorEmail(doctor);
+               ArrayList<String> recipients = new ArrayList<>();
+               recipients.add(patientEmail);
+               recipients.add(doctorEmail);
+               Email email = new Email();
+               email.setRecepients(recipients);
+               email.setSubject("Νέο ραντεβού");
+               email.setBody("...");
+               this.dispose();
+           }
        }
        
-       private void chooseNewSearch() {
+       private void chooseNewSearch() { //TODO: Shouldn't this just close the screen?
            
        }
        

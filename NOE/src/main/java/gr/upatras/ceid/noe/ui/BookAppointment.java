@@ -1,10 +1,20 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.DatabaseConnection;
+import gr.upatras.ceid.noe.MessageHelper;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author NickSxiz
  */
 public class BookAppointment extends javax.swing.JFrame {
+    private String hospital;
+    private String specialization;
+    private Date date;
 
     public BookAppointment() {
         initComponents();
@@ -12,38 +22,67 @@ public class BookAppointment extends javax.swing.JFrame {
     }
     
     public void display(){
-        
+        this.setVisible(true);
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        //jCombobox.setValues = databaseConnection.retrieveAvailableHospitals();
+
+        //Values for presentation
+        //jCombobox.setValues = ...
     }
     
     private void chooseHospital(){
-        
+        //this.hospital = jComboBox.getSelectedValue()...
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        //jCombobox.setValues = databaseConnection.retrieveAvailableSpecializations(this.hospital);
+
+        //Values for presentation
+        //jCombobox.setValues = ...
     }
+
      private void chooseSpecialization(){
-         
+         //this.specialization = jComboBox.getSelectedValue()...
+         DatabaseConnection databaseConnection = new DatabaseConnection();
+         //jCombobox.setValues = databaseConnection.retrieveAvailableDates(this.hospital, this.specialization);
+
+         //Values for presentation
+         //jCombobox.setValues = ...
      }
      
      private void chooseDate(){
-         
+         //this.date = jComboBox.getSelectedValue()...
      }
      
      private void chooseFindAppointment(){
-         
+         calculateDateAndTime();
      }
      
      private void chooseClear(){
-         
+         cancelChoices();
      }
      
      private void cancelChoices(){
-         
+         this.hospital = null;
+         this.specialization = null;
+         this.date = null;
+         //jCombobox.setSelectedValue = ...
+         //jCombobox.setSelectedValue = ...
+         //jCombobox.setSelectedValue = ...
      }
      
      private void calculateDateAndTime(){
-         
+         DatabaseConnection databaseConnection = new DatabaseConnection();
+         ArrayList<LocalDateTime> availableAppointments = databaseConnection.retrieveAvailableAppointments(this.hospital, this.specialization, this.date);
+         if(availableAppointments.isEmpty()){
+             MessageHelper.showErrorMessage("Δεν υπάρχουν διαθέσιμα ραντεβού");
+         }
+         //Values for presentation
+         //jCombobox.setValues = ...
+         PatientAvailableAppointmentsScreen patientAvailableAppointmentsScreen = new PatientAvailableAppointmentsScreen(availableAppointments);
+         patientAvailableAppointmentsScreen.display();
      }
      
      private void changeChoices(){
-         
+         //Change choices
      }
     /**
      * This method is called from within the constructor to initialize the form.

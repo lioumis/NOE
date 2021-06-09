@@ -410,7 +410,7 @@ public class PatientMainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        PatientBookAppointmentScreen.main(null);
+        BookAppointment.main(null);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {
