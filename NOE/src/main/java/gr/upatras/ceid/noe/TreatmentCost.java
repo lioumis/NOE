@@ -1,6 +1,8 @@
 
 package gr.upatras.ceid.noe;
 
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+
 import java.util.HashMap;
 
 /**

@@ -1,6 +1,7 @@
 
 package gr.upatras.ceid.noe;
 
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.io.File;

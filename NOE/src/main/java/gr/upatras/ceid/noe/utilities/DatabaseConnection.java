@@ -1,8 +1,7 @@
-package gr.upatras.ceid.noe;
+package gr.upatras.ceid.noe.utilities;
 
+import gr.upatras.ceid.noe.*;
 import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
-import gr.upatras.ceid.noe.utilities.DateHelper;
-import gr.upatras.ceid.noe.utilities.MessageHelper;
 
 import java.io.File;
 import java.sql.*;
@@ -272,5 +271,14 @@ public class DatabaseConnection {
 
     public void saveEvaluation(Evaluation evaluation) { //TODO: Class
         //Store doctor evaluation from patient
+    }
+
+    public void saveOrder(Order order) { //TODO: Class
+        //Save a supply order
+    }
+
+    public Supply retrieveSupply(String code) { //TODO: Class
+        //Retrieve supply name and quantity
+        return new Supply();
     }
 }

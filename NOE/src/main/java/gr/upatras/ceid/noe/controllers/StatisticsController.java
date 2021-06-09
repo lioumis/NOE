@@ -1,4 +1,4 @@
-package gr.upatras.ceid.noe;
+package gr.upatras.ceid.noe.controllers;
 
 import java.util.ArrayList;
 

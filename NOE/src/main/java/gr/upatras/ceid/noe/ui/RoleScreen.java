@@ -1,6 +1,6 @@
 package gr.upatras.ceid.noe.ui;
 
-import gr.upatras.ceid.noe.DatabaseConnection;
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
 import gr.upatras.ceid.noe.utilities.RoleHelper;
 
 import java.util.ArrayList;
