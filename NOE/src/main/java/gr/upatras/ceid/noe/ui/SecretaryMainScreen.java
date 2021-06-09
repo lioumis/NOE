@@ -122,7 +122,7 @@ public class SecretaryMainScreen extends javax.swing.JFrame {
         jLabel13.setText(" Save");
 
         jButton6.setBackground(new java.awt.Color(204, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon("D:\\save1.png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
