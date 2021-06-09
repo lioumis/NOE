@@ -72,10 +72,10 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("Όνομα Γραμματέα");
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Όνομα Νοσοκομείου");
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -155,7 +155,6 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
         jButton3.setText("Αποστολή");
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setText("Exit");
@@ -171,7 +170,7 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
                 .addComponent(jLabel6)
                 .addGap(492, 492, 492)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 609, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 789, Short.MAX_VALUE)
                 .addComponent(jLabel1))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
