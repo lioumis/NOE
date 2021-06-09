@@ -84,6 +84,7 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Όνομα Νοσοκομείου");
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton2.setText("Εισαγωγή");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
