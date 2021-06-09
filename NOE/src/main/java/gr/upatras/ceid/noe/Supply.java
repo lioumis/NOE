@@ -7,6 +7,7 @@ package gr.upatras.ceid.noe;
 public class Supply {
     private String name;
     private float cost;
+    private int quantity; //TODO: Class
 
     public String getName() {
         return name;
@@ -24,16 +25,23 @@ public class Supply {
         this.cost = cost;
     }
 
-    public void calculate() {
+    public int getQuantity() { //TODO: Class
+        return quantity;
+    }
 
+    public void setQuantity(int quantity) { //TODO: Class
+        this.quantity = quantity;
+    }
+
+    public void calculate() {
+        //Calculate
     }
 
     public void save() {
-
+        //Save
     }
 
     public void create() {
-
+        //Create
     }
-
 }

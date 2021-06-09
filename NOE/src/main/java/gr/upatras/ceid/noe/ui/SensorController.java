@@ -5,11 +5,13 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+import gr.upatras.ceid.noe.Sensor;
 /**
  *
  * @author NickSxiz
  */
-public class SensorController extends javax.swing.JFrame {
+public class SensorController extends javax.swing.JFrame { //TODO: Should not be a screen
 
     /**
      * Creates new form SensorController
@@ -19,22 +21,25 @@ public class SensorController extends javax.swing.JFrame {
         this.setResizable(false);
         //this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/NOE_Logo.png")).getImage());
     }
+    Sensor sensor = new Sensor();
 
-    private void activate() {
-        
+    public void activate() { //TODO: Class
+        sensor.activate();
     }
-    
-    
-    private void deactivate() {
-        
+
+
+    public void deactivate() { //TODO: Class
+        sensor.deactivate();
     }
-    
-    private void askData() {
-        
+
+    public void askData() { //TODO: Class
+        String code = sensor.getData();
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        databaseConnection.retrieveSupply(code);
     }
-    
-    private void restart() {
-        
+
+    public void restart() { //TODO: Class
+        sensor.restart();
     }
 
     /**

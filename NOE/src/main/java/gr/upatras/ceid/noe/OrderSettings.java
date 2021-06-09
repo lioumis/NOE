@@ -6,7 +6,6 @@ public class OrderSettings {
 
     private HashMap<Supply, Integer> thresholds;
 
-
     public HashMap<Supply, Integer> getThresholds() {
         return thresholds;
     }

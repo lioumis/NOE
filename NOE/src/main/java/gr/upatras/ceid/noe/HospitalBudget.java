@@ -53,12 +53,10 @@ public class HospitalBudget {
 
 
     public void initializeBudget() {
-
+        calculate();
     }
 
     private void calculate() {
-
+        this.totalBudget = this.equipmentCosts + this.functionalCosts + this.payroll + this.supplyCosts;
     }
-
-
 }

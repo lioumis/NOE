@@ -150,7 +150,8 @@ public class LoginScreen extends javax.swing.JFrame {
         authenticator.setUsername(jTextField1.getText());
         authenticator.setPassword(String.valueOf(jPasswordField1.getPassword()));
         if(authenticator.authenticate()){
-            RoleScreen.main(null);
+            RoleScreen roleScreen = new RoleScreen(authenticator.getUsername());
+            roleScreen.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed

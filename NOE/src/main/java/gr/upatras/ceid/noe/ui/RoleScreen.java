@@ -1,5 +1,10 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+import gr.upatras.ceid.noe.utilities.RoleHelper;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Evangelos Lioumis
@@ -9,6 +14,21 @@ public class RoleScreen extends javax.swing.JFrame {
     public RoleScreen() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+
+    public RoleScreen(String user) {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        getRoles(user);
+    }
+
+    private void getRoles(String user){
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        ArrayList<String> roleIds = databaseConnection.retrieveUserRoles(user);
+        ArrayList<String> roles = RoleHelper.mapRoles(roleIds);
+        for (String role : roles) {
+            jComboBox1.addItem(role);
+        }
     }
 
     /** This method is called from within the constructor to

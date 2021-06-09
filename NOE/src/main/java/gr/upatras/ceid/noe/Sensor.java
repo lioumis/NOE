@@ -7,15 +7,18 @@ public class Sensor {
 
 
     public void activate() {
+        //Sensor activation
     }
 
     public String getData() {
-        return new String();
-    }
+        return "";
+    } //TODO class
 
     public void deactivate() {
+        //Sensor deactivation
     }
 
     public void restart() {
+        //Sensor restart
     }
 }

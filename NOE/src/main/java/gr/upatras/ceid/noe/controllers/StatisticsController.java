@@ -1,4 +1,4 @@
-package gr.upatras.ceid.noe;
+package gr.upatras.ceid.noe.controllers;
 
 import java.util.ArrayList;
 
@@ -6,11 +6,12 @@ import java.util.ArrayList;
  * @author Evangelos Lioumis
  */
 public class StatisticsController {
+
     public void calculateStatistics() {
 
     }
 
-    public boolean createEmail(ArrayList<String> recepients, String subject, String body) {
+    public boolean createEmail(ArrayList<String> recipients, String subject, String body) {
         return true;
     }
 }
