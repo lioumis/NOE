@@ -82,10 +82,10 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jPanel2.setBackground(new java.awt.Color(229, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Όνομα Νοσοκομείου");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Όνομα Ιατρού");
 
         jLabel2.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
@@ -124,7 +124,6 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
         jTextField8.setText("jTextField8");
 
         jButton3.setBackground(new java.awt.Color(229, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -135,7 +134,6 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
         jLabel12.setText("Exit");
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel13.setText("Save");
