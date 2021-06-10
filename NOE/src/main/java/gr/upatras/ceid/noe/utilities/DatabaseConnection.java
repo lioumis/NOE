@@ -5,6 +5,7 @@ import gr.upatras.ceid.noe.exceptions.NOEAuthenticationException;
 
 import java.io.File;
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -282,4 +283,39 @@ public class DatabaseConnection {
         //Retrieve supply name and quantity
         return new Supply();
     }
+
+
+    public ArrayList<String> retrieveAvailableHospitals() {
+        //Return all available for an appointment hospitals
+        return new ArrayList<>();
+    }
+
+    public ArrayList<String> retrieveAvailableSpecializations(String hospital) {
+        //Return all available specializations os the hospital for an appointment
+        return new ArrayList<>();
+    }
+
+    public ArrayList<Date> retrieveAvailableDates(String hospital, String specialization) {
+        //Return all available dates for the specific hospital and specialization
+        return new ArrayList<>();
+    }
+
+    public ArrayList<LocalDateTime> retrieveAvailableAppointments(String hospital, String specialization, java.util.Date date) {
+        //Return available appointments
+        ArrayList<LocalDateTime> appointments = new ArrayList<>();
+        appointments.add(LocalDateTime.now());
+        return appointments;
+    }
+
+    public String retrievePatientEmail(String patient) {
+        //Return patient email
+        return "";
+    }
+
+    public String retrieveDoctorEmail(String doctor) {
+        //Return doctor email
+        return "";
+    }
+
+
 }
