@@ -8,6 +8,7 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
 
     public BudgetEditScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -129,7 +130,7 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
         });
 
         jButton3.setBackground(new java.awt.Color(229, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -143,7 +144,7 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
         jLabel11.setText("Exit");
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Save_Icon.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);

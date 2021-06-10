@@ -16,6 +16,7 @@ public class Form extends javax.swing.JFrame {
      */
     public Form() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
     
     public void fillForm() {

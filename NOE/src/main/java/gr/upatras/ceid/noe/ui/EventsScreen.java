@@ -11,6 +11,7 @@ public class EventsScreen extends javax.swing.JFrame {
      */
     public EventsScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
     
     public void display() {

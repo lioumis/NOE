@@ -320,7 +320,7 @@
               <Color blue="ff" green="ff" red="e5" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\exiticonvol2.png"/>
+              <Image iconType="3" name="/Exit_Icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -349,7 +349,7 @@
               <Color blue="ff" green="ff" red="e5" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\savevol2.png"/>
+              <Image iconType="3" name="/Save_Icon.png"/>
             </Property>
           </Properties>
           <Events>

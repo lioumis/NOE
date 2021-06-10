@@ -8,6 +8,7 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
 
     public DoctorMainScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -96,31 +97,17 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jLabel5.setText("Επώνυμο:");
 
-        jTextField2.setText("jTextField2");
-
         jLabel6.setText("Όνομα Πατρός");
-
-        jTextField3.setText("jTextField3");
 
         jLabel7.setText("Τηλέφωνο:");
 
-        jTextField4.setText("jTextField4");
-
         jLabel8.setText("Email:");
-
-        jTextField5.setText("jTextField5");
 
         jLabel9.setText("ΑΦΜ:");
 
-        jTextField6.setText("jTextField6");
-
         jLabel10.setText("AMKA:");
 
-        jTextField7.setText("jTextField7");
-
         jLabel11.setText("Αριθμός Ταυτότητας:");
-
-        jTextField8.setText("jTextField8");
 
         jButton3.setBackground(new java.awt.Color(229, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
@@ -279,7 +266,8 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        DoctorProgrammScreen doctorProgrammScreen = new DoctorProgrammScreen();
+        doctorProgrammScreen.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

@@ -5,6 +5,8 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Sensor;
+
 /**
  *
  * @author NickSxiz
@@ -16,11 +18,11 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
      */
     public AdditionSubtractionScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
     
     public void display(boolean add){ //TODO: Class
         this.setVisible(true);
-        SensorController sensorController = new SensorController(); //TODO: Complete after controller gets removed from ui.
         if(add){
             adding();
         } else {
@@ -167,12 +169,12 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)
-                        .addGap(36, 36, 36)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton5))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1242, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -246,7 +248,8 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        SensorController sensorController = new SensorController();
+        sensorController.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
