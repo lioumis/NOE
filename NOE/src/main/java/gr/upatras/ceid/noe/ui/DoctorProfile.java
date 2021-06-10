@@ -5,12 +5,19 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Doctor;
+import gr.upatras.ceid.noe.Patient;
+import gr.upatras.ceid.noe.controllers.EvaluationController;
+
+
 /**
  *
  * @author User
  */
 public class DoctorProfile extends javax.swing.JFrame {
-
+    private EvaluationController evaluationController = new EvaluationController();
+    private Doctor doctor;
+    private Patient patient;
     /**
      * Creates new form DoctorProfile
      */
@@ -18,13 +25,21 @@ public class DoctorProfile extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
+
+    public DoctorProfile(Doctor doctor, Patient patient) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.doctor = doctor;
+        this.patient = patient;
+    }
     
     public void display(){
-        
+        this.setVisible(true);
     }
     
     private void displayEvaluations() {
-         
+        float evaluations = evaluationController.calculateEvaluations(doctor.getAfm(), patient.getAfm());
+        //display
     }
 
     /**

@@ -13,11 +13,13 @@ public class SecretaryMainScreen extends javax.swing.JFrame { /*TODO*/
     }
 
     private void showCostScreen() {
-
+        SecretaryHospitalizationScreen secretaryHospitalizationScreen = new SecretaryHospitalizationScreen();
+        secretaryHospitalizationScreen.setVisible(true);
     }
 
     private void showDischargeNoteScreen() {
-
+        DischargeNoteScreen discharge = new DischargeNoteScreen();
+        discharge.setVisible(true);
     }
 
     /**
@@ -290,13 +292,11 @@ public class SecretaryMainScreen extends javax.swing.JFrame { /*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SecretaryHospitalizationScreen secretaryHospitalizationScreen = new SecretaryHospitalizationScreen();
-        secretaryHospitalizationScreen.setVisible(true);
+        showCostScreen();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        DischargeNoteScreen discharge = new DischargeNoteScreen();
-        discharge.setVisible(true);
+        showDischargeNoteScreen();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

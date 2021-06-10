@@ -1,10 +1,16 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.HospitalBudget;
+import gr.upatras.ceid.noe.controllers.BudgetController;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class ManagerBudgetScreen extends javax.swing.JFrame {
+    private BudgetController budgetController = new BudgetController();
+    private HospitalBudget budget;
+    private String hospital;
 
     public ManagerBudgetScreen() {
         initComponents();
@@ -12,28 +18,38 @@ public class ManagerBudgetScreen extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    public void initialize() {
+    public ManagerBudgetScreen(String hospital) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
+        this.hospital = hospital;
+    }
 
+    public void initialize() {
+        this.setVisible(true);
     }
 
     public void update() {
-
+        budget = budgetController.generateBudget(hospital);
+        displayBudget();
     }
 
     private void edit() {
-
+        BudgetEditScreen budgetEditScreen = new BudgetEditScreen(budget);
+        budgetEditScreen.setVisible(true);
     }
 
     private void displayBudget() {
-
+        jTextField1.setText(String.valueOf(budget.getTotalBudget()));
+        //Fill table
     }
 
     private void send() {
-
+        budgetController.createEmail();
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     /**

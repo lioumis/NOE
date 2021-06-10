@@ -146,13 +146,21 @@ public class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Authenticator authenticator = new Authenticator();
-        authenticator.setUsername(jTextField1.getText());
-        authenticator.setPassword(String.valueOf(jPasswordField1.getPassword()));
-        if(authenticator.authenticate()){
-            RoleScreen roleScreen = new RoleScreen(authenticator.getUsername());
+
+        //Overriding authentication for testing reasons
+        if(jTextField1.getText().equals("test") && String.valueOf(jPasswordField1.getPassword()).equals("password")){
+            RoleScreen roleScreen = new RoleScreen("test");
             roleScreen.setVisible(true);
             this.dispose();
+        } else {
+            Authenticator authenticator = new Authenticator();
+            authenticator.setUsername(jTextField1.getText());
+            authenticator.setPassword(String.valueOf(jPasswordField1.getPassword()));
+            if(authenticator.authenticate()){
+                RoleScreen roleScreen = new RoleScreen(authenticator.getUsername());
+                roleScreen.setVisible(true);
+                this.dispose();
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

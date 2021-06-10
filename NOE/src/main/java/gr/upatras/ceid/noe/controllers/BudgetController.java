@@ -11,29 +11,30 @@ import java.util.ArrayList;
  * @author Evangelos Lioumis
  */
 public class BudgetController {
-    public float generateBudget(String hospital) { //TODO: Class
+    public HospitalBudget generateBudget(String hospital) { //TODO: Class
         DatabaseConnection databaseConnection = new DatabaseConnection();
         HospitalBudget hospitalBudget = databaseConnection.retrieveBudgetInfo(hospital);
         hospitalBudget.initializeBudget();
-        return hospitalBudget.getTotalBudget();
+        return hospitalBudget;
     }
 
     public void updateBudget(HospitalBudget budget) { //TODO: Class
         if (validateNotEmpty(budget)) {
+            budget.calculate();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.updateBudgetInfo(budget);
         }
     }
 
-    public boolean createEmail(ArrayList<String> recipients, String subject, String body) { //TODO: Class
+    public boolean createEmail() { //TODO: Class
         DatabaseConnection databaseConnection = new DatabaseConnection();
         String recipient = databaseConnection.retrieveMinistryEmail();
         ArrayList<String> specificRecipients = new ArrayList<>();
         specificRecipients.add(recipient);
         Email email = new Email();
         email.setRecipients(specificRecipients);
-        email.setSubject(subject);
-        email.setBody(body);
+        email.setSubject("Hospital Budget");
+        email.setBody("");
         return email.send();
     }
 

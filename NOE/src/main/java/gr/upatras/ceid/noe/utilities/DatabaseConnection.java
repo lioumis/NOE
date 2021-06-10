@@ -300,7 +300,7 @@ public class DatabaseConnection {
         return new ArrayList<>();
     }
 
-    public ArrayList<LocalDateTime> retrieveAvailableAppointments(String hospital, String specialization, java.util.Date date) {
+    public ArrayList<LocalDateTime> retrieveAvailableAppointments(String hospital, String specialization, java.util.Date startDate, java.util.Date endDate) { //TODO: Class
         //Return available appointments
         ArrayList<LocalDateTime> appointments = new ArrayList<>();
         appointments.add(LocalDateTime.now());

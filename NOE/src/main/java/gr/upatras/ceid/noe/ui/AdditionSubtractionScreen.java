@@ -31,19 +31,19 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
     }
     
     private void adding() {
-        
+        //Adding supplies
     }
     
     private void subtracting() {
-        
+        //Removing supplies
     }
     
     private void onSave() {
-        
+        //Save supplies
     }
     
     private void displayData() {
-        
+        //Display
     }
 
     private void onClose() { //TODO: Class

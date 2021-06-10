@@ -1,5 +1,6 @@
 package gr.upatras.ceid.noe.utilities;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
@@ -20,5 +21,9 @@ public class DateHelper {
 
     public static int calculateDuration(LocalTime start, LocalTime end) {
         return 0;
+    }
+
+    public static Date parseDate(String date){
+        return Date.from(Instant.parse(date));
     }
 }

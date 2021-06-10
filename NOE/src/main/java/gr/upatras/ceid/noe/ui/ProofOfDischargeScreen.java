@@ -5,26 +5,40 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.controllers.SecretaryFormController;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class ProofOfDischargeScreen extends javax.swing.JFrame {
+    private String name;
+    private String surname;
+    private SecretaryFormController secretaryFormController;
 
-    /**
-     * Creates new form ProofOfDischargeScreen
-     */
     public ProofOfDischargeScreen() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 
-    public void display() {
+    public ProofOfDischargeScreen(String name, String surname, SecretaryFormController secretaryFormController) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.name = name;
+        this.surname = surname;
+        this.secretaryFormController = secretaryFormController;
+    }
 
+    public void display() {
+        this.setVisible(true);
     }
 
     public void onSend() {
-
+        if(secretaryFormController.showMessage()){
+            //Send
+            MessageHelper.showSuccessMessage("Επιτυχής αποστολή");
+        }
     }
 
     /**

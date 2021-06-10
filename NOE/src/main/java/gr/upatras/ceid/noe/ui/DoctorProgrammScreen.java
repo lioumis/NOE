@@ -1,10 +1,13 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Doctor;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class DoctorProgrammScreen extends javax.swing.JFrame {
+    private Doctor doctor;
 
     public DoctorProgrammScreen() {
         initComponents();
@@ -156,7 +159,7 @@ public class DoctorProgrammScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        EventsScreen eventsScreen = new EventsScreen();
+        EventsScreen eventsScreen = new EventsScreen(doctor);
         eventsScreen.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

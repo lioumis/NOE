@@ -1,5 +1,10 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Email;
+import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Evangelos Lioumis
@@ -13,27 +18,41 @@ public class ManagerStatisticsScreen extends javax.swing.JFrame { /*TODO*/
     }
 
     public void initialize() {
-
+        this.setVisible(true);
     }
 
     public void update() {
-
+        //Update
     }
 
     private void notifyEmployees(){
-
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        ArrayList<String> emails = databaseConnection.retrieveEmployeeEmails();
+        Email email = new Email();
+        email.setRecipients(emails);
+        email.setSubject("Ενημέρωση για μη φυσιολογικό στατιστικό");
+        email.setBody("...");
+        email.send();
     }
 
     private void send() {
-
+        DatabaseConnection databaseConnection = new DatabaseConnection();
+        ArrayList<String> emails = new ArrayList<>();
+        String emailAddress = databaseConnection.retrieveMinistryEmail();
+        emails.add(emailAddress);
+        Email email = new Email();
+        email.setRecipients(emails);
+        email.setSubject("Ενημέρωση για τα στατιστικά");
+        email.setBody("...");
+        email.send();
     }
 
     private void displayStatistics() {
-
+        //Display
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     /**

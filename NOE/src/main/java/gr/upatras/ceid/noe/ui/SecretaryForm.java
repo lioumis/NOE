@@ -10,21 +10,27 @@ package gr.upatras.ceid.noe.ui;
  * @author Evangelos Lioumis
  */
 public class SecretaryForm extends javax.swing.JFrame {
+    private String name;
+    private String surname;
 
-    /**
-     * Creates new form SecretaryForm
-     */
     public SecretaryForm() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 
-    public void display() {
+    public SecretaryForm(String name, String surname) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.name = name;
+        this.surname = surname;
+    }
 
+    public void display() {
+        this.setVisible(true);
     }
 
     private void onCancel() {
-
+        this.dispose();
     }
 
     /**
@@ -199,7 +205,7 @@ public class SecretaryForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
+        onCancel();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

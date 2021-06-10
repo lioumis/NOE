@@ -14,13 +14,14 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
     }
     
     private void addSupplies() {
-        
+        AdditionSubtractionScreen additionSubtractionScreen = new AdditionSubtractionScreen();
+        additionSubtractionScreen.setVisible(true);
     }
-    
-    
-    
+
+
+
     private void subtractionSupplies() {
-        
+        // Subtract supplies
     }
 
     /**
@@ -267,8 +268,7 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        AdditionSubtractionScreen additionSubtractionScreen = new AdditionSubtractionScreen();
-        additionSubtractionScreen.setVisible(true);
+        addSupplies();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     public static void main(String args[]) {

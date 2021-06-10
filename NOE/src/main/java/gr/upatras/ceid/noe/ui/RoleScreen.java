@@ -23,11 +23,21 @@ public class RoleScreen extends javax.swing.JFrame {
     }
 
     private void getRoles(String user){
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        ArrayList<String> roleIds = databaseConnection.retrieveUserRoles(user);
-        ArrayList<String> roles = RoleHelper.mapRoles(roleIds);
-        for (String role : roles) {
-            jComboBox1.addItem(role);
+
+        //Overriding role call to db for testing reasons
+        if(user.equals("test")) {
+            jComboBox1.addItem("Ασθενής");
+            jComboBox1.addItem("Διευθυντής");
+            jComboBox1.addItem("Γραμματέας");
+            jComboBox1.addItem("Υπεύθυνος Προμηθειών");
+            jComboBox1.addItem("Ιατρός");
+        } else {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            ArrayList<String> roleIds = databaseConnection.retrieveUserRoles(user);
+            ArrayList<String> roles = RoleHelper.mapRoles(roleIds);
+            for (String role : roles) {
+                jComboBox1.addItem(role);
+            }
         }
     }
 
@@ -56,7 +66,6 @@ public class RoleScreen extends javax.swing.JFrame {
         jLabel1.setText("Επιλογή ρόλου:");
 
         jComboBox1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ασθενής", "Ιατρός", "Διευθυντής", "Γραμματέας", "Υπεύθυνος Προμηθειών" }));
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButton1.setText("Είσοδος");

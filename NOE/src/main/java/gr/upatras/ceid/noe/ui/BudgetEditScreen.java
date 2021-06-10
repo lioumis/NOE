@@ -1,31 +1,59 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.HospitalBudget;
+import gr.upatras.ceid.noe.controllers.BudgetController;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
+    private HospitalBudget budget;
+    private BudgetController budgetController = new BudgetController();
 
     public BudgetEditScreen() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+    }
+
+    public BudgetEditScreen(HospitalBudget budget) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
+        this.budget = budget;
     }
 
     public void initialize() {
-
+        displayInfo();
     }
 
     private void displayInfo() {
+        //Display info
+        float supplyCosts = budget.getSupplyCosts();
+        float payroll = budget.getPayroll();
+        float functionalCosts = budget.getFunctionalCosts();
+        float equipmentCosts = budget.getEquipmentCosts();
+        float total = budget.getTotalBudget();
+
+        jTextField1.setText(String.valueOf(payroll));
+        jTextField9.setText(String.valueOf(functionalCosts));
+        jTextField6.setText(String.valueOf(supplyCosts));
+        jTextField7.setText(String.valueOf(equipmentCosts));
+        jTextField8.setText(String.valueOf(total));
 
     }
 
     private void save() {
-
+        budget.setEquipmentCosts(Float.parseFloat(jTextField7.getText()));
+        budget.setFunctionalCosts(Float.parseFloat(jTextField9.getText()));
+        budget.setPayroll(Float.parseFloat(jTextField1.getText()));
+        budget.setSupplyCosts(Float.parseFloat(jTextField6.getText()));
+        budgetController.updateBudget(budget);
+        //Update values in screen
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     /**

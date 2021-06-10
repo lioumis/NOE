@@ -5,6 +5,8 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.controllers.SecretaryFormController;
+
 /**
  *
  * @author Evangelos Lioumis
@@ -20,20 +22,14 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
     }
 
     public void display() {
-
+        this.setVisible(true);
     }
 
     public void onCreate() {
-
+        SecretaryFormController secretaryFormController = new SecretaryFormController();
+        secretaryFormController.initialize(jTextField1.getText(), jTextField2.getText());
     }
 
-    private void fillForm() {
-
-    }
-
-    private void submitForm() {
-
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -193,8 +189,7 @@ public class DischargeNoteScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        SecretaryForm form = new SecretaryForm();
-        form.setVisible(true);
+        onCreate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

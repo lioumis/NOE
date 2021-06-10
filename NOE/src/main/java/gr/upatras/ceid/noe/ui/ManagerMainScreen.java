@@ -13,15 +13,18 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
     }
 
     private void showStatisticsScreen(){
-
+        ManagerStatisticsScreen managerStatisticsScreen = new ManagerStatisticsScreen();
+        managerStatisticsScreen.setVisible(true);
     }
 
     private void showBudgetScreen(){
-
+        ManagerBudgetScreen managerBudgetScreen = new ManagerBudgetScreen("");
+        managerBudgetScreen.setVisible(true);
     }
 
     private void chooseRecruitment(){
-
+        ManagerManagementScreen managerManagementScreen = new ManagerManagementScreen();
+        managerManagementScreen.setVisible(true);
     }
 
     /**
@@ -155,6 +158,11 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setText("Exit");
@@ -306,18 +314,15 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ManagerBudgetScreen managerBudgetScreen = new ManagerBudgetScreen();
-        managerBudgetScreen.setVisible(true);
+        showBudgetScreen();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ManagerStatisticsScreen managerStatisticsScreen = new ManagerStatisticsScreen();
-        managerStatisticsScreen.setVisible(true);
+        showStatisticsScreen();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ManagerManagementScreen managerManagementScreen = new ManagerManagementScreen();
-        managerManagementScreen.setVisible(true);
+        chooseRecruitment();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -327,6 +332,10 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
