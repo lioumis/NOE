@@ -11,17 +11,14 @@ import gr.upatras.ceid.noe.Sensor;
  *
  * @author NickSxiz
  */
-public class SensorController extends javax.swing.JFrame { //TODO: Should not be a screen
+public class SensorController extends javax.swing.JFrame {
+    Sensor sensor = new Sensor();
 
-    /**
-     * Creates new form SensorController
-     */
     public SensorController() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.setResizable(false);
-        //this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/NOE_Logo.png")).getImage());
     }
-    Sensor sensor = new Sensor();
 
     public void activate() { //TODO: Class
         sensor.activate();

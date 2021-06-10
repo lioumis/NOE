@@ -15,6 +15,7 @@ public class SecretaryForm extends javax.swing.JFrame {
      * Creates new form SecretaryForm
      */
     public SecretaryForm() {
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 

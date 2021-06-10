@@ -15,6 +15,7 @@ public class ProofOfDischargeScreen extends javax.swing.JFrame {
      * Creates new form ProofOfDischargeScreen
      */
     public ProofOfDischargeScreen() {
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 

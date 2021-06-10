@@ -9,6 +9,7 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
 
     public SupplyManagerMainScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
     
@@ -86,27 +87,15 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
 
         jLabel6.setText("Όνομα Πατρός:");
 
-        jTextField3.setText("jTextField3");
-
         jLabel7.setText("Τηλέφωνο:");
-
-        jTextField4.setText("jTextField4");
 
         jLabel8.setText("Email:");
 
-        jTextField5.setText("jTextField5");
-
         jLabel9.setText("ΑΦΜ:");
-
-        jTextField6.setText("jTextField6");
 
         jLabel10.setText("AMKA:");
 
-        jTextField7.setText("jTextField7");
-
         jLabel11.setText("Αριθμός Ταυτότητας:");
-
-        jTextField8.setText("jTextField8");
 
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
@@ -225,6 +214,11 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton6.setText("Καταχώρηση Προμηθειών");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -271,6 +265,11 @@ public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        AdditionSubtractionScreen additionSubtractionScreen = new AdditionSubtractionScreen();
+        additionSubtractionScreen.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

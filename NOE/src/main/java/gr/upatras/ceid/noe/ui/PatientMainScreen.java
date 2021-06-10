@@ -8,6 +8,7 @@ public class PatientMainScreen extends javax.swing.JFrame {
 
     public PatientMainScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
     private void chooseAppointment() {

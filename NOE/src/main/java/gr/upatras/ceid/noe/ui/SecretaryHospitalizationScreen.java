@@ -9,6 +9,7 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
 
     public SecretaryHospitalizationScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -155,6 +156,11 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setText("Exit");
@@ -288,6 +294,10 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

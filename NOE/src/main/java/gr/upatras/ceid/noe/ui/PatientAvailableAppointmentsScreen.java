@@ -16,6 +16,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
 
     public PatientAvailableAppointmentsScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -192,7 +193,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {

@@ -8,6 +8,7 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
     public ManagerMainScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -147,15 +148,9 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
 
         jLabel9.setText("ΑΦΜ:");
 
-        jTextField6.setText("jTextField6");
-
         jLabel10.setText("AMKA:");
 
-        jTextField7.setText("jTextField7");
-
         jLabel11.setText("Αριθμός Ταυτότητας:");
-
-        jTextField8.setText("jTextField8");
 
         jButton1.setBackground(new java.awt.Color(229, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
@@ -311,15 +306,18 @@ public class ManagerMainScreen extends javax.swing.JFrame {/*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ManagerBudgetScreen.main(null);
+        ManagerBudgetScreen managerBudgetScreen = new ManagerBudgetScreen();
+        managerBudgetScreen.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ManagerStatisticsScreen.main(null);
+        ManagerStatisticsScreen managerStatisticsScreen = new ManagerStatisticsScreen();
+        managerStatisticsScreen.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ManagerManagementScreen.main(null);
+        ManagerManagementScreen managerManagementScreen = new ManagerManagementScreen();
+        managerManagementScreen.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

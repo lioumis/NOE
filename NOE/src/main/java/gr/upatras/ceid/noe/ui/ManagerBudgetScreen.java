@@ -8,6 +8,7 @@ public class ManagerBudgetScreen extends javax.swing.JFrame {
 
     public ManagerBudgetScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
