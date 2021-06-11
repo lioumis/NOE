@@ -15,8 +15,8 @@ public class Application {
     private String email;
     private boolean evaluated;
     private File recruitmentApplication;
-    private String review; //TODO Class diagram
-    private boolean accepted; //TODO Class diagram
+    private String review;
+    private boolean accepted;
 
     public String getName() {
         return name;

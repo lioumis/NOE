@@ -35,7 +35,7 @@ public class SecretaryFormController {
 
     }
 
-    public boolean showMessage() { //TODO: Class
+    public boolean showMessage() {
         return MessageHelper.showConfirmationMessage("Αποστολή εξιτηρίου;");
     }
 
