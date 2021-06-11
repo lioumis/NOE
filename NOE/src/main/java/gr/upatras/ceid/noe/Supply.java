@@ -25,7 +25,7 @@ public class Supply {
         this.cost = cost;
     }
 
-    public int getQuantity()
+    public int getQuantity() {
         return quantity;
     }
 
