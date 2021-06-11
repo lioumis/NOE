@@ -70,7 +70,7 @@ public class Authenticator {
         try {
             userRoles = databaseConnection.retrieveUserRoles(username);
             if (containsImportantRole(userRoles)) {
-                //TODO: 2 Factor Authentication
+                //2 Factor Authentication
             }
         } catch (Exception e) {
             MessageHelper.showErrorMessage("Εσφαλμένος κωδικός");

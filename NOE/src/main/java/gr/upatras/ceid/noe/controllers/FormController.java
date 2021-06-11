@@ -8,17 +8,17 @@ import gr.upatras.ceid.noe.utilities.DatabaseConnection;
  */
 public class FormController {
 
-    public boolean checkForErrors(Evaluation evaluation) { //TODO: Class
+    public boolean checkForErrors(Evaluation evaluation) {
         return true;
 
     }
 
-    public boolean checkForEmpties(Evaluation evaluation) { //TODO: Class
+    public boolean checkForEmpties(Evaluation evaluation) {
         return true;
 
     }
 
-    public void save(Evaluation evaluation) { //TODO: Class
+    public void save(Evaluation evaluation) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         databaseConnection.saveEvaluation(evaluation);
     }

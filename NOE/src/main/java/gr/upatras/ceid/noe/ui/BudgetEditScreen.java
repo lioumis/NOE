@@ -1,30 +1,59 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.HospitalBudget;
+import gr.upatras.ceid.noe.controllers.BudgetController;
+
 /**
  *
  * @author Evangelos Lioumis
  */
-public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
+public class BudgetEditScreen extends javax.swing.JFrame {
+    private HospitalBudget budget;
+    private BudgetController budgetController = new BudgetController();
 
     public BudgetEditScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+
+    public BudgetEditScreen(HospitalBudget budget) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
+        this.budget = budget;
     }
 
     public void initialize() {
-
+        displayInfo();
     }
 
     private void displayInfo() {
+        //Display info
+        float supplyCosts = budget.getSupplyCosts();
+        float payroll = budget.getPayroll();
+        float functionalCosts = budget.getFunctionalCosts();
+        float equipmentCosts = budget.getEquipmentCosts();
+        float total = budget.getTotalBudget();
+
+        jTextField1.setText(String.valueOf(payroll));
+        jTextField9.setText(String.valueOf(functionalCosts));
+        jTextField6.setText(String.valueOf(supplyCosts));
+        jTextField7.setText(String.valueOf(equipmentCosts));
+        jTextField8.setText(String.valueOf(total));
 
     }
 
     private void save() {
-
+        budget.setEquipmentCosts(Float.parseFloat(jTextField7.getText()));
+        budget.setFunctionalCosts(Float.parseFloat(jTextField9.getText()));
+        budget.setPayroll(Float.parseFloat(jTextField1.getText()));
+        budget.setSupplyCosts(Float.parseFloat(jTextField6.getText()));
+        budgetController.updateBudget(budget);
+        //Update values in screen
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     /**
@@ -129,7 +158,7 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
         });
 
         jButton3.setBackground(new java.awt.Color(229, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\exiticonvol2.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -143,7 +172,7 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
         jLabel11.setText("Exit");
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\savevol2.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Save_Icon.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -304,11 +333,11 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -320,19 +349,19 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField9ActionPerformed
 
     public static void main(String args[]) {

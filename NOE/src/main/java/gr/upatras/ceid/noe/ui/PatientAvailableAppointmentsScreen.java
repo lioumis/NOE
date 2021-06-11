@@ -16,6 +16,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
 
     public PatientAvailableAppointmentsScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
@@ -31,12 +32,12 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
        }
        
        private void chooseDateAndTime() {
-           //TODO: Enable book button
+           //Enable book button
        }
        
        private void chooseBookAppointment() {
            if(MessageHelper.showConfirmationMessage("Κλείσιμο ραντεβού;")){
-               //TODO: Save appointment
+               //Save appointment
                DatabaseConnection databaseConnection = new DatabaseConnection();
                String patient = "";
                String doctor = "";
@@ -46,15 +47,15 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
                recipients.add(patientEmail);
                recipients.add(doctorEmail);
                Email email = new Email();
-              // email.setRecepients(recipients);
+               email.setRecipients(recipients);
                email.setSubject("Νέο ραντεβού");
                email.setBody("...");
                this.dispose();
            }
        }
        
-       private void chooseNewSearch() { //TODO: Shouldn't this just close the screen?
-           
+       private void chooseNewSearch() {
+           this.dispose();
        }
        
        private boolean sendEmail(ArrayList<String> recipients, String subject, String body) {
@@ -188,11 +189,11 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        chooseBookAppointment();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {

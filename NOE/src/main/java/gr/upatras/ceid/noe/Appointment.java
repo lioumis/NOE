@@ -72,6 +72,4 @@ public class Appointment {
     public Appointment getAppointment() {
         return this;
     }
-
-
 }

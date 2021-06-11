@@ -11,34 +11,31 @@ import gr.upatras.ceid.noe.Sensor;
  *
  * @author NickSxiz
  */
-public class SensorController extends javax.swing.JFrame { //TODO: Should not be a screen
-
-    /**
-     * Creates new form SensorController
-     */
-    public SensorController() {
-        initComponents();
-        this.setResizable(false);
-        //this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/NOE_Logo.png")).getImage());
-    }
+public class SensorController extends javax.swing.JFrame {
     Sensor sensor = new Sensor();
 
-    public void activate() { //TODO: Class
+    public SensorController() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+    }
+
+    public void activate() {
         sensor.activate();
     }
 
 
-    public void deactivate() { //TODO: Class
+    public void deactivate() {
         sensor.deactivate();
     }
 
-    public void askData() { //TODO: Class
+    public void askData() {
         String code = sensor.getData();
         DatabaseConnection databaseConnection = new DatabaseConnection();
         databaseConnection.retrieveSupply(code);
     }
 
-    public void restart() { //TODO: Class
+    public void restart() {
         sensor.restart();
     }
 
@@ -151,19 +148,19 @@ public class SensorController extends javax.swing.JFrame { //TODO: Should not be
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        activate();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        deactivate();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        restart();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        askData();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**

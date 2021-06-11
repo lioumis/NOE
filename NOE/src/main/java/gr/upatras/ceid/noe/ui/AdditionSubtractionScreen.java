@@ -5,6 +5,8 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Sensor;
+
 /**
  *
  * @author NickSxiz
@@ -16,11 +18,11 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
      */
     public AdditionSubtractionScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
     
-    public void display(boolean add){ //TODO: Class
+    public void display(boolean add){
         this.setVisible(true);
-        SensorController sensorController = new SensorController(); //TODO: Complete after controller gets removed from ui.
         if(add){
             adding();
         } else {
@@ -29,24 +31,21 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
     }
     
     private void adding() {
-        
+        //Adding supplies
     }
     
     private void subtracting() {
-        
+        //Removing supplies
     }
     
     private void onSave() {
-        
+        //Save supplies
     }
     
     private void displayData() {
-        
+        //Display
     }
 
-    private void onClose() { //TODO: Class
-
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -167,12 +166,12 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)
-                        .addGap(36, 36, 36)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton5))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1242, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -234,23 +233,24 @@ public class AdditionSubtractionScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        SensorController sensorController = new SensorController();
+        sensorController.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

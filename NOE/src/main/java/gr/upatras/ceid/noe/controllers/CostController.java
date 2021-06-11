@@ -13,7 +13,7 @@ import java.util.HashMap;
  * @author Evangelos Lioumis
  */
 public class CostController {
-    public File generateCost(String patientName) { //TODO Add to class diagram
+    public File generateCost(String patientName) {
         if (validateNotEmpty(patientName) && validateCorrect(patientName)) {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Patient patient = databaseConnection.searchPatient(patientName);
@@ -47,7 +47,7 @@ public class CostController {
         return true;
     }
 
-    private float calculateCost(TreatmentCost treatmentCost) { //TODO Add to class diagram
+    private float calculateCost(TreatmentCost treatmentCost) {
         HashMap<String, Float> costs = treatmentCost.getCosts();
         float totalCost = 0;
         for (float cost : costs.values()) {
@@ -56,7 +56,7 @@ public class CostController {
         return totalCost;
     }
 
-    private File generateReceipt(float total, TreatmentCost treatmentCost) { //TODO Add to class diagram
+    private File generateReceipt(float total, TreatmentCost treatmentCost) {
         //Receipt is generated and returned
         return new File("");
     }

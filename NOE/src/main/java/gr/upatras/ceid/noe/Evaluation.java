@@ -44,6 +44,4 @@ public class Evaluation {
     public Evaluation getEvaluation() {
         return this;
     }
-
-
 }

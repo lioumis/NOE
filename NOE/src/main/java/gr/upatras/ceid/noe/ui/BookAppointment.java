@@ -3,8 +3,10 @@ package gr.upatras.ceid.noe.ui;
 
 
 import gr.upatras.ceid.noe.utilities.DatabaseConnection;
+import gr.upatras.ceid.noe.utilities.DateHelper;
 import gr.upatras.ceid.noe.utilities.MessageHelper;
 
+import javax.swing.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,42 +18,39 @@ import java.util.Date;
 public class BookAppointment extends javax.swing.JFrame {
     private String hospital;
     private String specialization;
-    private Date date;
+    private Date startDate;
+    private Date endDate;
 
     public BookAppointment() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
     
     public void display(){
         this.setVisible(true);
         DatabaseConnection databaseConnection = new DatabaseConnection();
-        //jComboBox1.setModel(newCombo); = databaseConnection.retrieveAvailableHospitals();
-
-        //Values for presentation
-        //jCombobox.setValues = ...
+        ArrayList<String> hospitals = databaseConnection.retrieveAvailableHospitals();
+        for (String s : hospitals) {
+            jComboBox1.addItem(s);
+        }
     }
     
     private void chooseHospital(){
-        //this.hospital = jComboBox.getSelectedValue()...
+        this.hospital = jComboBox1.getSelectedItem().toString();
         DatabaseConnection databaseConnection = new DatabaseConnection();
-        //jCombobox.setValues = databaseConnection.retrieveAvailableSpecializations(this.hospital);
-
-        //Values for presentation
-        //jCombobox.setValues = ...
+        ArrayList<String> hospitals = databaseConnection.retrieveAvailableSpecializations(this.hospital);
+        for (String s : hospitals) {
+            jComboBox2.addItem(s);
+        }
     }
 
      private void chooseSpecialization(){
-         //this.specialization = jComboBox.getSelectedValue()...
-         DatabaseConnection databaseConnection = new DatabaseConnection();
-         //jCombobox.setValues = databaseConnection.retrieveAvailableDates(this.hospital, this.specialization);
-
-         //Values for presentation
-         //jCombobox.setValues = ...
+         this.specialization = jComboBox2.getSelectedItem().toString();
      }
      
      private void chooseDate(){
-         //this.date = jComboBox.getSelectedValue()...
+         this.startDate = DateHelper.parseDate(jTextField1.getText());
      }
      
      private void chooseFindAppointment(){
@@ -65,20 +64,20 @@ public class BookAppointment extends javax.swing.JFrame {
      private void cancelChoices(){
          this.hospital = null;
          this.specialization = null;
-         this.date = null;
-         //jCombobox.setSelectedValue = ...
-         //jCombobox.setSelectedValue = ...
-         //jCombobox.setSelectedValue = ...
+         this.startDate = null;
+         this.endDate = null;
+         jComboBox1.setSelectedIndex(0);
+         jComboBox2.setSelectedIndex(0);
+         jTextField1.setText("");
+         jTextField2.setText("");
      }
      
      private void calculateDateAndTime(){
          DatabaseConnection databaseConnection = new DatabaseConnection();
-         ArrayList<LocalDateTime> availableAppointments = databaseConnection.retrieveAvailableAppointments(this.hospital, this.specialization, this.date);
+         ArrayList<LocalDateTime> availableAppointments = databaseConnection.retrieveAvailableAppointments(this.hospital, this.specialization, this.startDate, this.endDate);
          if(availableAppointments.isEmpty()){
              MessageHelper.showErrorMessage("Δεν υπάρχουν διαθέσιμα ραντεβού");
          }
-         //Values for presentation
-         //jCombobox.setValues = ...
          PatientAvailableAppointmentsScreen patientAvailableAppointmentsScreen = new PatientAvailableAppointmentsScreen(availableAppointments);
          patientAvailableAppointmentsScreen.display();
      }
@@ -196,6 +195,11 @@ public class BookAppointment extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setText("Βρές Ραντεβού");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -217,6 +221,11 @@ public class BookAppointment extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(229, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -297,16 +306,25 @@ public class BookAppointment extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PatientAvailableAppointmentsScreen patientAvailableAppointmentsScreen = new PatientAvailableAppointmentsScreen();
+        patientAvailableAppointmentsScreen.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

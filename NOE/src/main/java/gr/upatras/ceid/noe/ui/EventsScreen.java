@@ -1,32 +1,61 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Appointment;
+import gr.upatras.ceid.noe.Doctor;
+import gr.upatras.ceid.noe.Email;
+import gr.upatras.ceid.noe.Schedule;
+import gr.upatras.ceid.noe.controllers.DoctorDataController;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class EventsScreen extends javax.swing.JFrame {
+    private DoctorDataController doctorDataController = new DoctorDataController();
+    private Doctor doctor;
+    private Schedule schedule;
 
     /**
      * Creates new form EventsScreen
      */
     public EventsScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+
+    public EventsScreen(Doctor doctor) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        this.doctor = doctor;
     }
     
     public void display() {
-
+        this.setVisible(true);
     }
 
     private void chooseAppointment() {
+        //Refresh table with details
+        schedule = doctorDataController.getData(doctor.getAfm());
 
     }
 
     private void onSave() {
-
+        //Save
     }
 
     private void onCancel() {
-
+        Appointment appointment = new Appointment();
+        //Get appointment info from table
+        if (!doctorDataController.completionCheck(appointment)) {
+            return;
+        }
+        doctorDataController.cancelAppointment(appointment);
+        Email email = new Email();
+        //Setup email
+        if(email.send()) {
+            MessageHelper.showSuccessMessage("Επιτυχής ακύρωση και ενημέρωση");
+        }
     }
 
     /**
@@ -49,8 +78,7 @@ public class EventsScreen extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -108,10 +136,20 @@ public class EventsScreen extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setText("Αποθήκευση");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton2.setText("Ακύρωση");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,6 +213,14 @@ public class EventsScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        onCancel();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        onSave();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

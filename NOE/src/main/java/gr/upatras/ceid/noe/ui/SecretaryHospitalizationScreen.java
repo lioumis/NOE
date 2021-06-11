@@ -1,39 +1,56 @@
 
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.controllers.CostController;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
+
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  *
  * @author Evangelos Lioumis
  */
-public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*/
+public class SecretaryHospitalizationScreen extends javax.swing.JFrame {
+    private CostController costController = new CostController();
 
     public SecretaryHospitalizationScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
     public void initialize() {
-
+        this.setVisible(true);
     }
 
     public void showConfirmation() {
-
+        //Show confirmation dialog
     }
 
     private void cancel() {
-
+        close();
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     private void search() {
-
+        String patient = jTextField1.getText();
+        File file = costController.generateCost(patient);
     }
 
     private void send() {
-
+        ArrayList<String> recipients = new ArrayList<>();
+        //Inserting recipients
+        recipients.add("patient@patient.com");
+        if (costController.createEmail(recipients, "Hospitalization costs", "...")) {
+            MessageHelper.showSuccessMessage("Επιτυχής αποστολή");
+            this.dispose();
+        } else {
+            MessageHelper.showErrorMessage("Αποτυχία αποστολής");
+        }
     }
 
     /**
@@ -152,9 +169,19 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton3.setText("Αποστολή");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(229, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Exit_Icon.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setText("Exit");
@@ -274,20 +301,28 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        search();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        send();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

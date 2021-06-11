@@ -1,38 +1,55 @@
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.HospitalBudget;
+import gr.upatras.ceid.noe.controllers.BudgetController;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class ManagerBudgetScreen extends javax.swing.JFrame {
+    private BudgetController budgetController = new BudgetController();
+    private HospitalBudget budget;
+    private String hospital;
 
     public ManagerBudgetScreen() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
     }
 
-    public void initialize() {
+    public ManagerBudgetScreen(String hospital) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
+        this.hospital = hospital;
+    }
 
+    public void initialize() {
+        this.setVisible(true);
     }
 
     public void update() {
-
+        budget = budgetController.generateBudget(hospital);
+        displayBudget();
     }
 
     private void edit() {
-
+        BudgetEditScreen budgetEditScreen = new BudgetEditScreen(budget);
+        budgetEditScreen.setVisible(true);
     }
 
     private void displayBudget() {
-
+        jTextField1.setText(String.valueOf(budget.getTotalBudget()));
+        //Fill table
     }
 
     private void send() {
-
+        budgetController.createEmail();
     }
 
     private void close() {
-
+        this.dispose();
     }
 
     /**
@@ -186,15 +203,15 @@ public class ManagerBudgetScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.dispose(); //TODO: Testing
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     public static void main(String args[]) {

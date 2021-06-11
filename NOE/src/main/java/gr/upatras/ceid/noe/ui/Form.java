@@ -5,25 +5,54 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Doctor;
+import gr.upatras.ceid.noe.Evaluation;
+import gr.upatras.ceid.noe.Patient;
+import gr.upatras.ceid.noe.controllers.FormController;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
+
 /**
  *
  * @author User
  */
 public class Form extends javax.swing.JFrame {
+    private FormController formController = new FormController();
+    private Doctor doctor;
+    private Patient patient;
 
-    /**
-     * Creates new form Form
-     */
     public Form() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+
+    public Form(Doctor doctor, Patient patient) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        this.doctor = doctor;
+        this.patient = patient;
     }
     
     public void fillForm() {
-        
+        Evaluation evaluation = new Evaluation();
+        evaluation.setComment(jTextArea1.getText());
+
+        //Get rating from RadioButtons
+        evaluation.setRating(5);
+
+        evaluation.setDoctor(doctor);
+        evaluation.setPatient(patient);
+        if(!formController.checkForEmpties(evaluation)){
+            MessageHelper.showErrorMessage("Υπάρχουν κενά πεδία");
+            return;
+        }
+        if(!formController.checkForErrors(evaluation)){
+            MessageHelper.showErrorMessage("Υπάρχουν σφάλματα στα πεδία");
+            return;
+        }
     }
     
     public void onSave() {
-        
+        fillForm();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,7 +82,7 @@ public class Form extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(229, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1313, 794));
@@ -197,11 +226,11 @@ public class Form extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        System.exit(0); //TODO: Testing
+        this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        onSave();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**

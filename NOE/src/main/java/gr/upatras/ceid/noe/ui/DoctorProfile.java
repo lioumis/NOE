@@ -5,25 +5,41 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.Doctor;
+import gr.upatras.ceid.noe.Patient;
+import gr.upatras.ceid.noe.controllers.EvaluationController;
+
+
 /**
  *
  * @author User
  */
 public class DoctorProfile extends javax.swing.JFrame {
-
+    private EvaluationController evaluationController = new EvaluationController();
+    private Doctor doctor;
+    private Patient patient;
     /**
      * Creates new form DoctorProfile
      */
     public DoctorProfile() {
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
+    }
+
+    public DoctorProfile(Doctor doctor, Patient patient) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.doctor = doctor;
+        this.patient = patient;
     }
     
     public void display(){
-        
+        this.setVisible(true);
     }
     
     private void displayEvaluations() {
-         
+        float evaluations = evaluationController.calculateEvaluations(doctor.getAfm(), patient.getAfm());
+        //display
     }
 
     /**
@@ -56,7 +72,7 @@ public class DoctorProfile extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(229, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1313, 794));
@@ -162,6 +178,11 @@ public class DoctorProfile extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setText("Αξιολόγηση");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -274,32 +295,37 @@ public class DoctorProfile extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                Form form = new Form();
+                form.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

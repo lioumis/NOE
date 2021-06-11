@@ -59,7 +59,7 @@ public class DatabaseConnection {
         return null;
     }
 
-    public HospitalBudget retrieveBudgetInfo(String hospital) { //TODO: Class
+    public HospitalBudget retrieveBudgetInfo(String hospital) {
         //Retrieve Budget
         return new HospitalBudget();
     }
@@ -67,19 +67,19 @@ public class DatabaseConnection {
     public void updateBudgetInfo(HospitalBudget budget) {
     }
 
-    public Patient searchPatient(String patient) { //TODO Update class diagram
+    public Patient searchPatient(String patient) {
         String name = patient.split(" ")[0];
         String surname = patient.split(" ")[1];
         //Search for the patient
         return new Patient();
     }
 
-    public TreatmentCost searchHospitalizationCost(String afm) { //TODO Update class diagram
+    public TreatmentCost searchHospitalizationCost(String afm) {
         //Retrieve hospitalization cost
         return new TreatmentCost();
     }
 
-    public void updateCost(TreatmentCost treatmentCost) { //TODO Add to class diagram
+    public void updateCost(TreatmentCost treatmentCost) {
         float totalCost = treatmentCost.getTotalCost();
         //Store total cost at hospitalization
     }
@@ -88,12 +88,12 @@ public class DatabaseConnection {
         return new ArrayList<>();
     }
 
-    public ArrayList<Evaluation> retrieveEvaluations(String doctor) { //TODO: Class
+    public ArrayList<Evaluation> retrieveEvaluations(String doctor) {
         //Retrieve all evaluations of the doctor
         return new ArrayList<>();
     }
 
-    public ArrayList<Appointment> retrieveAppointments(String doctor, String patient) { //TODO: Class
+    public ArrayList<Appointment> retrieveAppointments(String doctor, String patient) {
         //Retrieve all appointments of the doctor
         return new ArrayList<>();
     }
@@ -110,7 +110,7 @@ public class DatabaseConnection {
         return "";
     }
 
-    public Schedule getSchedule(String amka) { //TODO: Domain
+    public Schedule getSchedule(String amka) {
         String query = "SELECT start, end, description, type FROM schedule WHERE doctor LIKE '" + amka + "';";
         Schedule schedule = new Schedule();
         Connection connection = connect();
@@ -146,11 +146,11 @@ public class DatabaseConnection {
         return schedule;
     }
 
-    public void updateAppointments(Appointment appointment) { //TODO: Class
+    public void updateAppointments(Appointment appointment) { //Method not in class diagram
         //Update
     }
 
-    public void removeAppointment(Appointment appointment) { //TODO: Class
+    public void removeAppointment(Appointment appointment) { //Method not in class diagram
         //Remove
     }
 
@@ -209,7 +209,7 @@ public class DatabaseConnection {
         return roles;
     }
 
-    public void deleteApplication(Application application) {  //TODO: New method
+    public void deleteApplication(Application application) {  //Method not in class diagram
         String update = "DELETE FROM application WHERE email LIKE '" + application.getEmail() + "';";
         Connection connection = connect();
         try {
@@ -222,7 +222,7 @@ public class DatabaseConnection {
         }
     }
 
-    public Application retrieveApplication(String name, String surname) { //TODO: New method
+    public Application retrieveApplication(String name, String surname) { //Function not in class diagram
         String query = "SELECT name, surname, email, application, evaluated, review, accepted FROM application WHERE name LIKE '" + name + "' AND surname LIKE '" + surname + "';";
         Connection connection = connect();
         Application application = new Application();
@@ -253,7 +253,7 @@ public class DatabaseConnection {
         return application;
     }
 
-    public void saveApplication(Application application) { //TODO: New method
+    public void saveApplication(Application application) { //Method not in class diagram
         boolean evaluated = application.isEvaluated();
         String review = application.getReview();
         boolean accepted = application.isAccepted();
@@ -271,15 +271,15 @@ public class DatabaseConnection {
         }
     }
 
-    public void saveEvaluation(Evaluation evaluation) { //TODO: Class
+    public void saveEvaluation(Evaluation evaluation) { //Method not in class diagram
         //Store doctor evaluation from patient
     }
 
-    public void saveOrder(Order order) { //TODO: Class
+    public void saveOrder(Order order) { //Method not in class diagram
         //Save a supply order
     }
 
-    public Supply retrieveSupply(String code) { //TODO: Class
+    public Supply retrieveSupply(String code) { //Function not in class diagram
         //Retrieve supply name and quantity
         return new Supply();
     }
@@ -300,7 +300,7 @@ public class DatabaseConnection {
         return new ArrayList<>();
     }
 
-    public ArrayList<LocalDateTime> retrieveAvailableAppointments(String hospital, String specialization, java.util.Date date) {
+    public ArrayList<LocalDateTime> retrieveAvailableAppointments(String hospital, String specialization, java.util.Date startDate, java.util.Date endDate) { //Function not in class diagram
         //Return available appointments
         ArrayList<LocalDateTime> appointments = new ArrayList<>();
         appointments.add(LocalDateTime.now());

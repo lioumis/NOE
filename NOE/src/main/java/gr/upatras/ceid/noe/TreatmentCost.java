@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class TreatmentCost {
     private HashMap<String, Float> costs;
-    private float totalCost; //TODO Add to class diagram
+    private float totalCost;
 
     public HashMap<String, Float> getCosts() {
         return costs;
@@ -20,11 +20,11 @@ public class TreatmentCost {
         this.costs = costs;
     }
 
-    public float getTotalCost() { //TODO Add to class diagram
+    public float getTotalCost() {
         return totalCost;
     }
 
-    public void setTotalCost(float totalCost) { //TODO Add to class diagram
+    public void setTotalCost(float totalCost) {
         this.totalCost = totalCost;
     }
 

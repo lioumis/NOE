@@ -14,7 +14,6 @@ public class Doctor extends Employee {
         this.speciality = speciality;
     }
 
-
     public Doctor getDoctor() {
         return this;
     }

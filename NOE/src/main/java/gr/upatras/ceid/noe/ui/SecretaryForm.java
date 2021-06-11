@@ -10,20 +10,27 @@ package gr.upatras.ceid.noe.ui;
  * @author Evangelos Lioumis
  */
 public class SecretaryForm extends javax.swing.JFrame {
+    private String name;
+    private String surname;
 
-    /**
-     * Creates new form SecretaryForm
-     */
     public SecretaryForm() {
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 
-    public void display() {
+    public SecretaryForm(String name, String surname) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.name = name;
+        this.surname = surname;
+    }
 
+    public void display() {
+        this.setVisible(true);
     }
 
     private void onCancel() {
-
+        this.dispose();
     }
 
     /**
@@ -53,7 +60,7 @@ public class SecretaryForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -194,11 +201,11 @@ public class SecretaryForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
+        onCancel();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

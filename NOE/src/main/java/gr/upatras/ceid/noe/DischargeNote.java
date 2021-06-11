@@ -16,5 +16,4 @@ public class DischargeNote {
     public void setDiseases(ArrayList<String> diseases) {
         this.diseases = diseases;
     }
-
 }

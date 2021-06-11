@@ -13,5 +13,4 @@ public class OrderSettings {
     public void setThresholds(HashMap<Supply, Integer> thresholds) {
         this.thresholds = thresholds;
     }
-
 }

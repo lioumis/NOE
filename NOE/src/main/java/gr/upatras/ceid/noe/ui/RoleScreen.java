@@ -23,11 +23,21 @@ public class RoleScreen extends javax.swing.JFrame {
     }
 
     private void getRoles(String user){
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        ArrayList<String> roleIds = databaseConnection.retrieveUserRoles(user);
-        ArrayList<String> roles = RoleHelper.mapRoles(roleIds);
-        for (String role : roles) {
-            jComboBox1.addItem(role);
+
+        //Overriding role call to db for testing reasons
+        if(user.equals("test")) {
+            jComboBox1.addItem("Ασθενής");
+            jComboBox1.addItem("Διευθυντής");
+            jComboBox1.addItem("Γραμματέας");
+            jComboBox1.addItem("Υπεύθυνος Προμηθειών");
+            jComboBox1.addItem("Ιατρός");
+        } else {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            ArrayList<String> roleIds = databaseConnection.retrieveUserRoles(user);
+            ArrayList<String> roles = RoleHelper.mapRoles(roleIds);
+            for (String role : roles) {
+                jComboBox1.addItem(role);
+            }
         }
     }
 
@@ -56,7 +66,6 @@ public class RoleScreen extends javax.swing.JFrame {
         jLabel1.setText("Επιλογή ρόλου:");
 
         jComboBox1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ασθενής", "Ιατρός", "Διευθυντής", "Γραμματέας", "Υπεύθυνος Προμηθειών" }));
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButton1.setText("Είσοδος");
@@ -114,23 +123,23 @@ public class RoleScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        switch(jComboBox1.getSelectedItem().toString()){ //TODO: Testing
-            case"Ασθενής": //TODO: Testing
-                PatientMainScreen.main(null); //TODO: Testing
-                break; //TODO: Testing
-            case"Ιατρός": //TODO: Testing
-                DoctorMainScreen.main(null); //TODO: Testing
-                break; //TODO: Testing
-            case"Διευθυντής": //TODO: Testing
-                ManagerMainScreen.main(null); //TODO: Testing
-                break; //TODO: Testing
-            case"Γραμματέας": //TODO: Testing
-                SecretaryMainScreen.main(null); //TODO: Testing
-                break; //TODO: Testing
-            case"Υπεύθυνος Προμηθειών": //TODO: Testing
-                SupplyManagerMainScreen.main(null); //TODO: Testing
-        } //TODO: Testing
-        this.dispose(); //TODO: Testing
+        switch(jComboBox1.getSelectedItem().toString()){
+            case"Ασθενής":
+                PatientMainScreen.main(null);
+                break;
+            case"Ιατρός":
+                DoctorMainScreen.main(null);
+                break;
+            case"Διευθυντής":
+                ManagerMainScreen.main(null);
+                break;
+            case"Γραμματέας":
+                SecretaryMainScreen.main(null);
+                break;
+            case"Υπεύθυνος Προμηθειών":
+                SupplyManagerMainScreen.main(null);
+        }
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {

@@ -5,25 +5,40 @@
  */
 package gr.upatras.ceid.noe.ui;
 
+import gr.upatras.ceid.noe.controllers.SecretaryFormController;
+import gr.upatras.ceid.noe.utilities.MessageHelper;
+
 /**
  *
  * @author Evangelos Lioumis
  */
 public class ProofOfDischargeScreen extends javax.swing.JFrame {
+    private String name;
+    private String surname;
+    private SecretaryFormController secretaryFormController;
 
-    /**
-     * Creates new form ProofOfDischargeScreen
-     */
     public ProofOfDischargeScreen() {
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
     }
 
-    public void display() {
+    public ProofOfDischargeScreen(String name, String surname, SecretaryFormController secretaryFormController) {
+        setExtendedState(MAXIMIZED_BOTH);
+        initComponents();
+        this.name = name;
+        this.surname = surname;
+        this.secretaryFormController = secretaryFormController;
+    }
 
+    public void display() {
+        this.setVisible(true);
     }
 
     public void onSend() {
-
+        if(secretaryFormController.showMessage()){
+            //Send
+            MessageHelper.showSuccessMessage("Επιτυχής αποστολή");
+        }
     }
 
     /**
@@ -59,7 +74,7 @@ public class ProofOfDischargeScreen extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1313, 794));
@@ -245,11 +260,11 @@ public class ProofOfDischargeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
