@@ -11,14 +11,14 @@ import java.util.ArrayList;
  * @author Evangelos Lioumis
  */
 public class BudgetController {
-    public HospitalBudget generateBudget(String hospital) { //TODO: Class
+    public HospitalBudget generateBudget(String hospital) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         HospitalBudget hospitalBudget = databaseConnection.retrieveBudgetInfo(hospital);
         hospitalBudget.initializeBudget();
         return hospitalBudget;
     }
 
-    public void updateBudget(HospitalBudget budget) { //TODO: Class
+    public void updateBudget(HospitalBudget budget) {
         if (validateNotEmpty(budget)) {
             budget.calculate();
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -26,7 +26,7 @@ public class BudgetController {
         }
     }
 
-    public boolean createEmail() { //TODO: Class
+    public boolean createEmail() {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         String recipient = databaseConnection.retrieveMinistryEmail();
         ArrayList<String> specificRecipients = new ArrayList<>();
@@ -38,7 +38,7 @@ public class BudgetController {
         return email.send();
     }
 
-    private boolean validateNotEmpty(HospitalBudget budget) { //TODO: Class
+    private boolean validateNotEmpty(HospitalBudget budget) {
         if (budget.getEquipmentCosts() == 0 || budget.getFunctionalCosts() == 0 || budget.getPayroll() == 0 || budget.getSupplyCosts() == 0) {
             MessageHelper.showErrorMessage("Τα πεδία είναι κενά");
             return false;
@@ -47,7 +47,7 @@ public class BudgetController {
         }
     }
 
-    private boolean validateCorrect(HospitalBudget budget) { //TODO: Class
+    private boolean validateCorrect(HospitalBudget budget) {
         return true;
     }
 }

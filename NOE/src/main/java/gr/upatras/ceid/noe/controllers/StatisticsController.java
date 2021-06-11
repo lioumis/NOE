@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class StatisticsController {
 
     public void calculateStatistics() {
-
+        //Calculate
     }
 
     public boolean createEmail(ArrayList<String> recipients, String subject, String body) {

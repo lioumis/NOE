@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
+public class DoctorMainScreen extends javax.swing.JFrame {
 
     public DoctorMainScreen() {
         initComponents();
@@ -271,7 +271,7 @@ public class DoctorMainScreen extends javax.swing.JFrame {/*TODO*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

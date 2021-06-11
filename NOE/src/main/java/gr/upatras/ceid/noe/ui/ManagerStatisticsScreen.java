@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author Evangelos Lioumis
  */
-public class ManagerStatisticsScreen extends javax.swing.JFrame { /*TODO*/
+public class ManagerStatisticsScreen extends javax.swing.JFrame {
 
     public ManagerStatisticsScreen() {
         initComponents();
@@ -305,27 +305,27 @@ public class ManagerStatisticsScreen extends javax.swing.JFrame { /*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
+        close();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {

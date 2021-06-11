@@ -12,7 +12,7 @@ public class Sensor {
 
     public String getData() {
         return "";
-    } //TODO class
+    }
 
     public void deactivate() {
         //Sensor deactivation

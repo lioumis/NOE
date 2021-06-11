@@ -5,7 +5,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author NickSxiz
  */
-public class SupplyManagerMainScreen extends javax.swing.JFrame { /*TODO*/
+public class SupplyManagerMainScreen extends javax.swing.JFrame {
 
     public SupplyManagerMainScreen() {
         initComponents();

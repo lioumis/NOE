@@ -15,7 +15,7 @@ public class SecretaryFormController {
     SecretaryForm secretaryForm;
     ProofOfDischargeScreen proofOfDischargeScreen;
 
-    public void initialize(String name, String surname) { //TODO: Class
+    public void initialize(String name, String surname) {
         secretaryForm = new SecretaryForm(name, surname);
         secretaryForm.display();
 

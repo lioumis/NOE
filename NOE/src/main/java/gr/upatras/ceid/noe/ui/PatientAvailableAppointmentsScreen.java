@@ -32,12 +32,12 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
        }
        
        private void chooseDateAndTime() {
-           //TODO: Enable book button
+           //Enable book button
        }
        
        private void chooseBookAppointment() {
            if(MessageHelper.showConfirmationMessage("Κλείσιμο ραντεβού;")){
-               //TODO: Save appointment
+               //Save appointment
                DatabaseConnection databaseConnection = new DatabaseConnection();
                String patient = "";
                String doctor = "";
@@ -47,7 +47,7 @@ public class PatientAvailableAppointmentsScreen extends javax.swing.JFrame {
                recipients.add(patientEmail);
                recipients.add(doctorEmail);
                Email email = new Email();
-              // email.setRecepients(recipients);
+               email.setRecipients(recipients);
                email.setSubject("Νέο ραντεβού");
                email.setBody("...");
                this.dispose();

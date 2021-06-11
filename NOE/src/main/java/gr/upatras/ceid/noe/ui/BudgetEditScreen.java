@@ -7,7 +7,7 @@ import gr.upatras.ceid.noe.controllers.BudgetController;
  *
  * @author Evangelos Lioumis
  */
-public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
+public class BudgetEditScreen extends javax.swing.JFrame {
     private HospitalBudget budget;
     private BudgetController budgetController = new BudgetController();
 
@@ -333,11 +333,11 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -349,19 +349,19 @@ public class BudgetEditScreen extends javax.swing.JFrame { /*TODO*/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField9ActionPerformed
 
     public static void main(String args[]) {

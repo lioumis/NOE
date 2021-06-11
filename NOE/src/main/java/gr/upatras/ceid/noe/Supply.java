@@ -31,9 +31,9 @@ public class Supply {
 
     public void setQuantity(int quantity) { //TODO: Class
         this.quantity = quantity;
-    }
+    } //TODO: Class
 
-    public void calculate() {
+    public void calculate() { //TODO: Class
         //Calculate
     }
 

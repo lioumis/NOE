@@ -4,7 +4,7 @@ package gr.upatras.ceid.noe.ui;
  *
  * @author Evangelos Lioumis
  */
-public class SecretaryMainScreen extends javax.swing.JFrame { /*TODO*/
+public class SecretaryMainScreen extends javax.swing.JFrame {
 
     public SecretaryMainScreen() {
         initComponents();
@@ -300,7 +300,7 @@ public class SecretaryMainScreen extends javax.swing.JFrame { /*TODO*/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

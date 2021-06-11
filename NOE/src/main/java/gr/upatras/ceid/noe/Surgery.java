@@ -47,5 +47,4 @@ public class Surgery {
     public Surgery getSurgery() {
         return this;
     }
-
 }

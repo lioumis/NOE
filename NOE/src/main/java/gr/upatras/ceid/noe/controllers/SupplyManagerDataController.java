@@ -20,11 +20,11 @@ public class SupplyManagerDataController {
         calculate(supplies);
     }
 
-    private void calculate(ArrayList<Supply> supplies) { //TODO: Class
+    private void calculate(ArrayList<Supply> supplies) {
         //Calculate
     }
 
-    public void create(HashMap<Supply, Integer> supplies) {//TODO: FIX PROBLEM HERE (ORDER HISTORY) //TODO: Class
+    public void create(HashMap<Supply, Integer> supplies) {
         //Create
         Order order = new Order();
         order.setDate(LocalDateTime.now());

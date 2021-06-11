@@ -20,22 +20,22 @@ public class SensorController extends javax.swing.JFrame {
         this.setResizable(false);
     }
 
-    public void activate() { //TODO: Class
+    public void activate() {
         sensor.activate();
     }
 
 
-    public void deactivate() { //TODO: Class
+    public void deactivate() {
         sensor.deactivate();
     }
 
-    public void askData() { //TODO: Class
+    public void askData() {
         String code = sensor.getData();
         DatabaseConnection databaseConnection = new DatabaseConnection();
         databaseConnection.retrieveSupply(code);
     }
 
-    public void restart() { //TODO: Class
+    public void restart() {
         sensor.restart();
     }
 

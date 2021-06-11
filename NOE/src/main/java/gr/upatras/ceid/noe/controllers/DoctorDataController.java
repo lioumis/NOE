@@ -13,13 +13,13 @@ import java.util.Date;
  */
 public class DoctorDataController {
 
-    public Schedule getData(String doctor) { //TODO: Domain
+    public Schedule getData(String doctor) {
         Schedule schedule = new Schedule();
         schedule.getSchedule(doctor);
         return schedule;
     }
 
-    public boolean completionCheck(Appointment appointment) { //TODO: Domain
+    public boolean completionCheck(Appointment appointment) {
         Date date = appointment.getDate();
         LocalTime time = appointment.getTime();
         int result = date.compareTo(new Date());

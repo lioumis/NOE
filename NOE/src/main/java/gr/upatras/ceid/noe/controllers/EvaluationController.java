@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class EvaluationController {
 
-    public float calculateEvaluations(String doctor, String patient) { //TODO: Class
+    public float calculateEvaluations(String doctor, String patient) {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         ArrayList<Evaluation> evaluations = databaseConnection.retrieveEvaluations(doctor);
         ArrayList<Appointment> appointments = databaseConnection.retrieveAppointments(doctor, patient);
@@ -33,14 +33,14 @@ public class EvaluationController {
         return eval;
     }
 
-    public void display(Doctor doctor, Patient patient) {//TODO: Class
+    public void display(Doctor doctor, Patient patient) {
         if (MessageHelper.showEvaluationProposalMessage("Αξιολόγηση ιατρού;")) {
             displayForm(doctor, patient);
         }
 
     }
 
-    public void displayForm(Doctor doctor, Patient patient) { //TODO: Class
+    public void displayForm(Doctor doctor, Patient patient) {
         Form form = new Form(doctor, patient);
         form.setVisible(true);
     }

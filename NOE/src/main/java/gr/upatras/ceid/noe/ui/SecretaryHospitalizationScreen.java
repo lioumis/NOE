@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Evangelos Lioumis
  */
-public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*/
+public class SecretaryHospitalizationScreen extends javax.swing.JFrame {
     private CostController costController = new CostController();
 
     public SecretaryHospitalizationScreen() {
@@ -301,7 +301,7 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -309,11 +309,11 @@ public class SecretaryHospitalizationScreen extends javax.swing.JFrame { /*TODO*
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
